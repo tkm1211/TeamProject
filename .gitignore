@@ -1,0 +1,11 @@
+Data/
+Library/
+Win32/
+x64/
+
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.ini
+*.vs
