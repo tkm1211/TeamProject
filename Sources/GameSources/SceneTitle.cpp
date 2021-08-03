@@ -56,13 +56,13 @@ void SceneTitle::Render()
 	{
 		titleSpr->Begin();
 		titleSpr->Draw(titleSprData, 0, { 1, 1, 1, 1 });
-		titleSpr->Draw(titleSprData, 1.5f, { 1, 1, 1, 1 });
+		titleSpr->Draw(titleSprData, 1.5f, { 1, 1, 1, 1 });//
 		titleSpr->End();
 	}
 
 	// ƒ‚ƒfƒ‹‚Ì•`‰æ
 	{
-		playerModel->Preparation(ShaderSystem::GetInstance()->GetShaderOfSkinnedMesh(ShaderSystem::DEFAULT), false);
+		playerModel->Preparation(ShaderSystem::GetInstance()->GetShaderOfSkinnedMesh(ShaderSystem::DEFAULT), true);
 		playerModel->Render(playerModelData.GetWorldMatrix(), CameraSystem::GetInstance()->mainView.GetViewMatrix(), CameraSystem::GetInstance()->mainView.GetProjectionMatrix(),
 			DirectX::XMFLOAT4(0.0f, -1.0f, 1.0f, 0.0f), playerModelData.GetColor(), FrameWork::GetInstance().GetElapsedTime());
 	}
