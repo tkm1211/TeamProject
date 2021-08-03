@@ -59,6 +59,7 @@ void SceneManager::Update()
 		pNext = nullptr;
 		pScene->Init();
 	}
+
 	pScene->Update();
 	//Sound‚ÌXVˆ—
 	SoundLoader::GetInstance()->Update();
