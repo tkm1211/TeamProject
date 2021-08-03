@@ -40,7 +40,6 @@
     <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexUtil.cpp" />
     <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexWIC.cpp" />
     <ClCompile Include="Library\DirectXTex-master\WICTextureLoader\WICTextureLoader.cpp" />
-    <ClCompile Include="pipipipipipipipiipipipipipipi.cpp" />
     <ClCompile Include="Sources\GameLibSources\AssetLoader.cpp" />
     <ClCompile Include="Sources\GameLibSources\Billboard.cpp" />
     <ClCompile Include="Sources\GameLibSources\Blander.cpp" />
