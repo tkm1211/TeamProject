@@ -5,6 +5,7 @@
 #include "InputDevice.h"
 #include "SoundLoader.h"
 #include "CameraSystem.h"
+#include "SceneGame.h"
 
 
 void SceneTitle::Init()
@@ -42,11 +43,11 @@ void SceneTitle::Update()
 {
 	if (Fade::GetInstance()->loading) return;
 
-	if (xInput[0].bAt || xInput[0].bBt || xInput[0].bXt || xInput[0].bYt)
+	if (GetAsyncKeyState(VK_SPACE) < 0/*xInput[0].bAt || xInput[0].bBt || xInput[0].bXt || xInput[0].bYt*/)
 	{
 		Fade::GetInstance()->onFadeFlg = true;
 		Fade::GetInstance()->loading = true;
-		//Fade::GetInstance()->SetNextScene(new SceneGame()); // TODO : ŽŸ‚ÌƒV[ƒ“‚ð’Ç‰Á
+		Fade::GetInstance()->SetNextScene(new SceneGame());
 	}
 }
 
@@ -70,6 +71,7 @@ void SceneTitle::Render()
 
 void SceneTitle::ImGui()
 {
+	ImGui::Text("Scene : Title");
 }
 
 void SceneTitle::UnInit()
