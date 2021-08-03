@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{c78f3060-c54f-4d86-af94-9026ef27a58f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Headers">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Library\Shaders">
+      <UniqueIdentifier>{16a6ad00-ca99-4bbb-b1d2-c587d7e170d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Library\WICTextureLoader">
+      <UniqueIdentifier>{effc1d20-9b61-43f5-bceb-177890a82c2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{e00afa3b-df29-4616-b61c-3954370af817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Headers">
+      <UniqueIdentifier>{df1648e3-0d3d-44d9-82af-079b2b76f741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DirectXTex">
+      <UniqueIdentifier>{0c8023cd-5b74-4735-9195-da890664691d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Pippi">
+      <UniqueIdentifier>{9a1edeb6-3d7a-4b0c-b8be-d6aa1983b702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Shaders\Billboard">
+      <UniqueIdentifier>{2bffb766-32b8-494a-a49c-a3c994f83d28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Shaders\GeometricPrimitive">
+      <UniqueIdentifier>{3d5a0787-70bd-4805-9ca2-c74d121cc84a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Shaders\SkinnedMesh">
+      <UniqueIdentifier>{c76c28e3-a2d6-49b4-9939-6645fe57f717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Shaders\Sprite">
+      <UniqueIdentifier>{7ba4651b-bd26-4137-b4fb-48e0ac9246ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Shaders\StaticMesh">
+      <UniqueIdentifier>{20992887-314a-458a-8fc3-43860b485875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Shaders\Function">
+      <UniqueIdentifier>{3138c3d4-279c-4ce4-aa42-418ef50037bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Shaders\ShadowMap">
+      <UniqueIdentifier>{83855be7-db81-4e8f-af08-ed6c2950855f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Sources">
+      <UniqueIdentifier>{6f7a71f5-5ca4-4911-847f-8ecdedeb4dc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\Shaders\MeshBatch">
+      <UniqueIdentifier>{2ee0c187-ec22-4172-bf73-8072a416f628}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\BC.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\BC4BC5.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\BC6HBC7.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\BCDirectCompute.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexCompress.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexCompressGPU.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexConvert.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexD3D11.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexDDS.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexFlipRotate.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexHDR.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexImage.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexMipmaps.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexMisc.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexNormalMaps.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexPMAlpha.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexResize.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexTGA.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexUtil.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\DirectXTex\DirectXTexWIC.cpp">
+      <Filter>DirectXTex</Filter>
+    </ClCompile>
+    <ClCompile Include="Library\DirectXTex-master\WICTextureLoader\WICTextureLoader.cpp">
+      <Filter>Library\WICTextureLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\SceneManager.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Billboard.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Collision.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\FrameWork.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\GeometricPrimitive.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\InputDevice.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Main.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Mesh.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\OBJ3D.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Quaternion.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\ResourceManager.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\SkinnedMesh.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Sprite.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\StaticMesh.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Texture.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Shader.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Light.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\PlayerTemplate.cpp">
+      <Filter>Game\Pippi</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\ShadowMap.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Blander.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Camera.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\CameraControl.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\SkinnedMeshBatch.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\Audio.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\easing.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\Fade.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\WAVFileReader.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\Model.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\SceneTitle.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\SoundLoader.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\AssetLoader.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameLibSources\MathFunction.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\SceneGame.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\ScoreManager.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\Timer.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\WaveManager.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\GameSystem.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Library\DirectXTex-master\DirectXTex\BC.h">
+      <Filter>DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DirectXTex-master\DirectXTex\BCDirectCompute.h">
+      <Filter>DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DirectXTex-master\DirectXTex\DDS.h">
+      <Filter>DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DirectXTex-master\DirectXTex\DirectXTex.h">
+      <Filter>DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DirectXTex-master\DirectXTex\DirectXTexP.h">
+      <Filter>DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DirectXTex-master\DirectXTex\filters.h">
+      <Filter>DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DirectXTex-master\DirectXTex\scoped.h">
+      <Filter>DirectXTex</Filter>
+    </ClInclude>
+    <ClInclude Include="Library\DirectXTex-master\WICTextureLoader\WICTextureLoader.h">
+      <Filter>Library\WICTextureLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Scene.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\FrameWork.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Quaternion.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\StaticMesh.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\SkinnedMesh.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\InputDevice.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Model.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Blender.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Billboard.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\GeometricPrimitive.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Texture.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Sprite.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Mesh.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Shader.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\ResourceManager.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Misc.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\HighResolutionTimer.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\PlayerTemplate.h">
+      <Filter>Game\Pippi</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Light.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\ShadowMap.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Camera.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Collision.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\OBJ3D.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\SkinnedMeshBatch.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Kokim.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Audio.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\easing.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Fade.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\WAVFileReader.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\SceneManager.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\SceneTitle.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\CameraControl.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\CameraSystem.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\SoundLoader.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\AssetLoader.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\MathFunction.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\SceneGame.h">
+      <Filter>Game\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\ScoreManager.h">
+      <Filter>Game\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Timer.h">
+      <Filter>Game\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\WaveManager.h">
+      <Filter>Game\Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\GameSystem.h">
+      <Filter>Game\Sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library\DirectXTex-master\DirectXTex\DirectXTex.inl">
+      <Filter>DirectXTex</Filter>
+    </None>
+    <None Include="Sources\Shader\Billboard.hlsli">
+      <Filter>Library\Shaders\Billboard</Filter>
+    </None>
+    <None Include="Sources\Shader\GeometricPrimitive.hlsli">
+      <Filter>Library\Shaders\GeometricPrimitive</Filter>
+    </None>
+    <None Include="Sources\Shader\SkinnedMesh.hlsli">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </None>
+    <None Include="Sources\Shader\Sprite.hlsli">
+      <Filter>Library\Shaders\Sprite</Filter>
+    </None>
+    <None Include="Sources\Shader\SpriteBatch.hlsli">
+      <Filter>Library\Shaders\Sprite</Filter>
+    </None>
+    <None Include="Sources\Shader\StaticMesh.hlsli">
+      <Filter>Library\Shaders\StaticMesh</Filter>
+    </None>
+    <None Include="Sources\Shader\Function.hlsli">
+      <Filter>Library\Shaders\Function</Filter>
+    </None>
+    <None Include="Sources\Shader\PhoneSkinnedMesh.hlsli">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </None>
+    <None Include="Sources\Shader\ShadowMap.hlsli">
+      <Filter>Library\Shaders\ShadowMap</Filter>
+    </None>
+    <None Include="Sources\Shader\NormalMapSkinnedMesh.hlsli">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </None>
+    <None Include="Sources\Shader\SwordLocus.hlsli">
+      <Filter>Library\Shaders</Filter>
+    </None>
+    <None Include="Sources\Shader\SkinnedMeshBatch.hlsli">
+      <Filter>Library\Shaders\MeshBatch</Filter>
+    </None>
+    <None Include="Sources\Shader\StaticMeshBatch.hlsli">
+      <Filter>Library\Shaders\MeshBatch</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Sources\Shader\BillboardPS.hlsl">
+      <Filter>Library\Shaders\Billboard</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\BillboardVS.hlsl">
+      <Filter>Library\Shaders\Billboard</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\GeometricPrimitivePS.hlsl">
+      <Filter>Library\Shaders\GeometricPrimitive</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\GeometricPrimitiveVS.hlsl">
+      <Filter>Library\Shaders\GeometricPrimitive</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SkinnedMeshPS.hlsl">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SkinnedMeshVS.hlsl">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SpriteBatchPS.hlsl">
+      <Filter>Library\Shaders\Sprite</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SpriteBatchVS.hlsl">
+      <Filter>Library\Shaders\Sprite</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SpritePS.hlsl">
+      <Filter>Library\Shaders\Sprite</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SpriteVS.hlsl">
+      <Filter>Library\Shaders\Sprite</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\StaticMeshPS.hlsl">
+      <Filter>Library\Shaders\StaticMesh</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\StaticMeshVS.hlsl">
+      <Filter>Library\Shaders\StaticMesh</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\PhoneSkinnedMeshVS.hlsl">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\PhoneSkinnedMeshPS.hlsl">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\ShadowMapPS.hlsl">
+      <Filter>Library\Shaders\ShadowMap</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\ShadowMapVS.hlsl">
+      <Filter>Library\Shaders\ShadowMap</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\NormalMapSkinnedMeshPS.hlsl">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\NormalMapSkinnedMeshVS.hlsl">
+      <Filter>Library\Shaders\SkinnedMesh</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SwordLocusVS.hlsl">
+      <Filter>Library\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SwordLocusPS.hlsl">
+      <Filter>Library\Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SkinnedMeshBatchPS.hlsl">
+      <Filter>Library\Shaders\MeshBatch</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\SkinnedMeshBatchVS.hlsl">
+      <Filter>Library\Shaders\MeshBatch</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\StaticMeshBatchPS.hlsl">
+      <Filter>Library\Shaders\MeshBatch</Filter>
+    </FxCompile>
+    <FxCompile Include="Sources\Shader\StaticMeshBatchVS.hlsl">
+      <Filter>Library\Shaders\MeshBatch</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
