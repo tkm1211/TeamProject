@@ -43,6 +43,7 @@ void SceneTitle::Update()
 {
 	if (Fade::GetInstance()->loading) return;
 
+	// ƒV[ƒ“‘JˆÚ
 	if (GetAsyncKeyState(VK_SPACE) < 0/*xInput[0].bAt || xInput[0].bBt || xInput[0].bXt || xInput[0].bYt*/)
 	{
 		Fade::GetInstance()->onFadeFlg = true;

@@ -2,6 +2,8 @@
 #include <memory>
 #include <assert.h>
 #include <tchar.h>
+#include <stdlib.h>
+#include <time.h>
 
 #include "FrameWork.h"
 #include "InputDevice.h"
@@ -21,6 +23,7 @@ LRESULT CALLBACK FnWndProc( HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam )
 
 INT WINAPI wWinMain( HINSTANCE instance, HINSTANCE prevInstance, LPWSTR cmdLine, INT cmdShow )
 {
+	srand(static_cast<unsigned>(time(nullptr)));
 
 #ifdef USE_DEBUG
 
