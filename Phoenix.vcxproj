@@ -66,6 +66,7 @@
     <ClCompile Include="Sources\GameSources\Audio.cpp" />
     <ClCompile Include="Sources\GameSources\CameraControl.cpp" />
     <ClCompile Include="Sources\GameSources\easing.cpp" />
+    <ClCompile Include="Sources\GameSources\EnemyManager.cpp" />
     <ClCompile Include="Sources\GameSources\Fade.cpp" />
     <ClCompile Include="Sources\GameSources\GameSystem.cpp" />
     <ClCompile Include="Sources\GameSources\PlayerTemplate.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="Sources\GameSources\CameraControl.h" />
     <ClInclude Include="Sources\GameSources\CameraSystem.h" />
     <ClInclude Include="Sources\GameSources\easing.h" />
+    <ClInclude Include="Sources\GameSources\EnemyManager.h" />
     <ClInclude Include="Sources\GameSources\Fade.h" />
     <ClInclude Include="Sources\GameSources\GameSystem.h" />
     <ClInclude Include="Sources\GameSources\Kokim.h" />

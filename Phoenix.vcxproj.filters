@@ -237,6 +237,9 @@
     <ClCompile Include="Sources\GameSources\GameSystem.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\GameSources\EnemyManager.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Library\DirectXTex-master\DirectXTex\BC.h">
@@ -372,19 +375,22 @@
       <Filter>Library\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\SceneGame.h">
-      <Filter>Game\Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="Sources\GameSources\ScoreManager.h">
-      <Filter>Game\Sources</Filter>
+      <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\Timer.h">
-      <Filter>Game\Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="Sources\GameSources\WaveManager.h">
-      <Filter>Game\Sources</Filter>
+      <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\GameSystem.h">
-      <Filter>Game\Sources</Filter>
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\ScoreManager.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\WaveManager.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\EnemyManager.h">
+      <Filter>Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
