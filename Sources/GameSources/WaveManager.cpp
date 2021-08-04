@@ -16,6 +16,9 @@ void WaveManager::Init()
     // 初期化
     for (WaveClearData& data : wave_resulted) data = {};
     Clear();
+
+    // タスクの設定
+    p_task = new TaskWave0();
 }
 
 
@@ -29,7 +32,7 @@ void WaveManager::Update()
 
 
     // タスクを完了したら次のウェーブへ
-    //if (JudgeTaskComplete()) NextWave();
+    if (JudgeTaskComplete()) NextWave();
 
 }
 
@@ -71,39 +74,33 @@ void WaveManager::NextWave()
 
     // 次のウェーブにする
     wave_state++;
+    // タスクの進行
+    ChangeNextTask();
 }
 
 
 bool WaveManager::JudgeTaskComplete()
 {
-    // 0 wave, Tutorial
-    if (wave_state == wave_default)
-    {
+    if (!p_task) return false;
 
-        return true;
+    return p_task->JudgeTaskComplete();
+}
+
+
+void WaveManager::ChangeNextTask()
+{
+    // 前回タスクの削除処理
+    if (p_task)
+    {
+        delete p_task;
+        p_task = nullptr;
     }
 
-    // 1 wave, First Task
+    // ウェーブ1のタスク
     if (wave_state == 1)
     {
-
-        return true;
+        p_task = new TaskWave1();
+        return;
     }
 
-    // 2 wave, Second Task
-    if (wave_state == 2)
-    {
-
-        return true;
-    }
-
-    // 3 wave, Final Task
-    if (wave_state == wave_max)
-    {
-
-        return true;
-    }
-
-
-    return false;
 }

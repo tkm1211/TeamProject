@@ -240,6 +240,9 @@
     <ClCompile Include="Sources\GameSources\EnemyManager.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\GameSources\Task.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Library\DirectXTex-master\DirectXTex\BC.h">
@@ -390,6 +393,9 @@
       <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\EnemyManager.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Task.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>

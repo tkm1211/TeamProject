@@ -3,6 +3,7 @@
 #include <memory>
 #include "Sprite.h"
 #include "Timer.h"
+#include "Task.h"
 
 
 // ウェーブのクリアデータ
@@ -42,6 +43,7 @@ public: // Set関数
 
 private:
     bool JudgeTaskComplete();
+    void ChangeNextTask();
 
 private:
     static constexpr int wave_default = 0;          // ウェーブの初期値(開始)
@@ -50,4 +52,5 @@ private:
     std::unique_ptr<Timer> timer = nullptr;         // ウェーブの経過時間
     std::unique_ptr<Sprite> spr_wave = nullptr;     // ウェーブの数字用スプライト
     WaveClearData wave_resulted[wave_max+1] = {};   // ウェーブごとのクリアタイムなどのデータ
+    Task* p_task = nullptr;                          // タスク
 };

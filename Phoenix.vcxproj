@@ -75,6 +75,7 @@
     <ClCompile Include="Sources\GameSources\SceneTitle.cpp" />
     <ClCompile Include="Sources\GameSources\ScoreManager.cpp" />
     <ClCompile Include="Sources\GameSources\SoundLoader.cpp" />
+    <ClCompile Include="Sources\GameSources\Task.cpp" />
     <ClCompile Include="Sources\GameSources\Timer.cpp" />
     <ClCompile Include="Sources\GameSources\WaveManager.cpp" />
     <ClCompile Include="Sources\GameSources\WAVFileReader.cpp" />
@@ -127,6 +128,7 @@
     <ClInclude Include="Sources\GameSources\SceneTitle.h" />
     <ClInclude Include="Sources\GameSources\ScoreManager.h" />
     <ClInclude Include="Sources\GameSources\SoundLoader.h" />
+    <ClInclude Include="Sources\GameSources\Task.h" />
     <ClInclude Include="Sources\GameSources\Timer.h" />
     <ClInclude Include="Sources\GameSources\WaveManager.h" />
     <ClInclude Include="Sources\GameSources\WAVFileReader.h" />
