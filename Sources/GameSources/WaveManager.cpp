@@ -71,7 +71,7 @@ void WaveManager::NextWave()
     EnemyManager::Instance().Clear();
     // 時間のリセット
     timer.get()->Clear();
-
+     
     // 次のウェーブにする
     wave_state++;
     // タスクの進行
@@ -96,10 +96,25 @@ void WaveManager::ChangeNextTask()
         p_task = nullptr;
     }
 
+    // タスクを指定しない
+    if (wave_state >= wave_max)return;
+
     // ウェーブ1のタスク
     if (wave_state == 1)
     {
         p_task = new TaskWave1();
+        return;
+    }
+
+    if (wave_state == 2)
+    {
+        p_task = new TaskWave2();
+        return;
+    }
+
+    if (wave_state == wave_max)
+    {
+        p_task = new TaskWave3();
         return;
     }
 

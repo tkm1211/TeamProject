@@ -15,6 +15,13 @@
 
 void SceneGame::Init()
 {
+	testModel = std::make_unique<Model>("Data/Assets/Model/player_anime.fbx", false);
+	{
+		testModel->StartAnimation(2, true);
+		testModelData.Init();
+		testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
+	}
+
 	// ‚·‚×‚Ä‚ÌƒTƒEƒ“ƒh‚ð’âŽ~
 	{
 		AllSoundStop();
@@ -73,4 +80,5 @@ void SceneGame::UnInit()
 {
 	GameSystem::Instance().UnInit();
 	WaveManager::Instance().UnInit();
+	testModelData.UnInit();
 }

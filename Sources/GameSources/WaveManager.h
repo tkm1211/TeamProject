@@ -46,8 +46,10 @@ private:
     void ChangeNextTask();
 
 private:
+    // 定数
     static constexpr int wave_default = 0;          // ウェーブの初期値(開始)
-    static constexpr int wave_max = 2;              // 最大ウェーブ数 (0 ~ 2)
+    static constexpr int wave_max = 3;              // 最大ウェーブ数 (0, 1 ~ 3)
+    // 変数
     int wave_state = wave_default;                  // 現在のウェーブ
     std::unique_ptr<Timer> timer = nullptr;         // ウェーブの経過時間
     std::unique_ptr<Sprite> spr_wave = nullptr;     // ウェーブの数字用スプライト

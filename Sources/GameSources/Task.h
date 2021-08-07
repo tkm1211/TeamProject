@@ -36,3 +36,27 @@ public:
     bool JudgeTaskComplete() override;
 
 };
+
+
+class TaskWave2 : public Task
+{
+public:
+    TaskWave2() {};
+    virtual ~TaskWave2() {};
+
+public:
+    bool JudgeTaskComplete() override;
+
+};
+
+
+class TaskWave3 : public Task
+{
+public:
+    TaskWave3() {};
+    virtual ~TaskWave3() {};
+
+public:
+    bool JudgeTaskComplete() override;
+
+};
