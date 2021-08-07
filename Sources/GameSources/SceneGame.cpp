@@ -8,6 +8,9 @@
 #include "SceneTitle.h"
 #include "GameSystem.h"
 #include "WaveManager.h"
+// ’Ç‰Á
+#include "EnemyManager.h"
+#include "EnemyDerived01.h"
 
 
 void SceneGame::Init()
@@ -26,6 +29,11 @@ void SceneGame::Init()
 
 	GameSystem::Instance().Init();
 	WaveManager::Instance().Init();
+
+	EnemyManager::Instance().Init();
+
+	std::shared_ptr<Enemy> enemy_00 = std::make_shared<EnemyDerrived01>();
+	EnemyManager::Instance().Spawn(enemy_00.get());
 }
 
 
@@ -49,7 +57,7 @@ void SceneGame::Update()
 
 void SceneGame::Render()
 {
-
+	EnemyManager::Instance().Render();
 }
 
 

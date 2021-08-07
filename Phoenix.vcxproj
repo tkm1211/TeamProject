@@ -66,6 +66,8 @@
     <ClCompile Include="Sources\GameSources\Audio.cpp" />
     <ClCompile Include="Sources\GameSources\CameraControl.cpp" />
     <ClCompile Include="Sources\GameSources\easing.cpp" />
+    <ClCompile Include="Sources\GameSources\Enemy.cpp" />
+    <ClCompile Include="Sources\GameSources\EnemyDerrived01.cpp" />
     <ClCompile Include="Sources\GameSources\EnemyManager.cpp" />
     <ClCompile Include="Sources\GameSources\Fade.cpp" />
     <ClCompile Include="Sources\GameSources\GameSystem.cpp" />
@@ -117,6 +119,8 @@
     <ClInclude Include="Sources\GameSources\CameraControl.h" />
     <ClInclude Include="Sources\GameSources\CameraSystem.h" />
     <ClInclude Include="Sources\GameSources\easing.h" />
+    <ClInclude Include="Sources\GameSources\Enemy.h" />
+    <ClInclude Include="Sources\GameSources\EnemyDerived01.h" />
     <ClInclude Include="Sources\GameSources\EnemyManager.h" />
     <ClInclude Include="Sources\GameSources\Fade.h" />
     <ClInclude Include="Sources\GameSources\GameSystem.h" />
@@ -368,6 +372,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -376,6 +383,7 @@
       <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;$(SolutionDir)Library\DirectXTex-master\DirectXTex;$(SolutionDir)Library\DirectXTex-master\WICTextureLoader;$(SolutionDir)Library\FBX SDK\2016.1.2\include;$(SolutionDir)Library\cereal\include;$(SolutionDir)Library\imgui-master;$(SolutionDir)Sources\GameLibSources;$(SolutionDir)Sources\GameSources;$(SolutionDir)Sources\GameSources\SceneShader;$(SolutionDir)Sources\Shader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <PrecompiledHeader />
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -394,6 +402,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;.\DirectXTex-master\DirectXTex;.\DirectXTex-master\WICTextureLoader;.\cereal-1.2.2\include;.\FBX SDK\2016.1.2\include;.\imgui-master;.\Library;.\Sources;.\Sources\GameSources;.\Sources\GameLibSources;%(AdditionalIncludeDirectories);.\Sources\GameSources;.\Sources\GameLibSources</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -412,6 +421,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;.\Library\DirectXTex-master\DirectXTex;.\Library\DirectXTex-master\WICTextureLoader;.\Library\cereal-1.2.2\include;.\Library\FBX SDK\2016.1.2\include;.\Library\imgui-master;.\Sources\GameLibSources;.\Sources\GameSources;.\Sources\Shader;%(AdditionalIncludeDirectories);.\Sources\GameSources;.\Sources\GameLibSources</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -433,6 +443,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>DXUT\Core;DXUT\Optional;.\DirectXTex-master\DirectXTex;.\DirectXTex-master\WICTextureLoader;.\cereal-1.2.2\include;.\FBX SDK\2016.1.2\include;.\imgui-master;.\Library;.\Sources;%(AdditionalIncludeDirectories);.\Sources\GameSources;.\Sources\GameLibSources</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

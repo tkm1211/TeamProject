@@ -1,6 +1,7 @@
 
 #include "EnemyManager.h"
 #include "FrameWork.h"
+#include "Enemy.h"
 #include <algorithm>
 
 
@@ -27,7 +28,7 @@ void EnemyManager::Render()
 {
     for (auto& enemy : enemies)
     {
-        // enemy->Render();
+        enemy->Render();
     }
 }
 
@@ -38,7 +39,7 @@ void EnemyManager::EnemyUpdate()
     for (auto& enemy : enemies)
     {
         if (!enemy) continue;
-        // enemy->Update(elapedTime);   // Q : elapsedTime‚ğˆø”‚É‚·‚é‚©‚Ç‚¤‚©
+        enemy->Update(elapsedTime);   // Q : elapsedTime‚ğˆø”‚É‚·‚é‚©‚Ç‚¤‚©
     }
 
 }

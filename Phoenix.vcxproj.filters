@@ -243,6 +243,12 @@
     <ClCompile Include="Sources\GameSources\Task.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\GameSources\EnemyDerrived01.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\Enemy.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Library\DirectXTex-master\DirectXTex\BC.h">
@@ -396,6 +402,12 @@
       <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\Task.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Enemy.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\EnemyDerived01.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>
