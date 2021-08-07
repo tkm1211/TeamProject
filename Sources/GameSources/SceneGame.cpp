@@ -12,6 +12,13 @@
 
 void SceneGame::Init()
 {
+	testModel = std::make_unique<Model>("Data/Assets/Model/player_anime.fbx", false);
+	{
+		testModel->StartAnimation(2, true);
+		testModelData.Init();
+		testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
+	}
+
 	// ‚·‚×‚Ä‚ÌƒTƒEƒ“ƒh‚ð’âŽ~
 	{
 		AllSoundStop();
@@ -49,7 +56,9 @@ void SceneGame::Update()
 
 void SceneGame::Render()
 {
-
+	testModel->Preparation(ShaderSystem::GetInstance()->GetShaderOfSkinnedMesh(ShaderSystem::DEFAULT), true);
+	testModel->Render(testModelData.GetWorldMatrix(), CameraSystem::GetInstance()->mainView.GetViewMatrix(), CameraSystem::GetInstance()->mainView.GetProjectionMatrix(),
+		DirectX::XMFLOAT4(0.0f, -1.0f, 1.0f, 0.0f), testModelData.GetColor(), FrameWork::GetInstance().GetElapsedTime());
 }
 
 
@@ -65,4 +74,5 @@ void SceneGame::UnInit()
 {
 	GameSystem::Instance().UnInit();
 	WaveManager::Instance().UnInit();
+	testModelData.UnInit();
 }
