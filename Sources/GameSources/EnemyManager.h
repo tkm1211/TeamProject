@@ -30,7 +30,7 @@ public: // GetŠÖ”
 
 public: // SetŠÖ”
     void Clear();
-    void Spawn(Enemy* enemy_) { enemies.emplace_back(enemy_); }
+    void Spawn(std::shared_ptr<Enemy>& enemy_) { enemies.emplace_back(enemy_); }
     void Remove(Enemy* enemy_) { removes.emplace_back(enemy_); }
 
 private:

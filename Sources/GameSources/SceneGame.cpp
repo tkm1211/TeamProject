@@ -15,12 +15,12 @@
 
 void SceneGame::Init()
 {
-	testModel = std::make_unique<Model>("Data/Assets/Model/player_anime.fbx", false);
-	{
-		testModel->StartAnimation(2, true);
-		testModelData.Init();
-		testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
-	}
+	//testModel = std::make_unique<Model>("Data/Assets/Model/player_anime.fbx", false);
+	//{
+	//	testModel->StartAnimation(2, true);
+	//	testModelData.Init();
+	//	testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
+	//}
 
 	// すべてのサウンドを停止
 	{
@@ -40,7 +40,7 @@ void SceneGame::Init()
 	EnemyManager::Instance().Init();
 
 	std::shared_ptr<Enemy> enemy_00 = std::make_shared<EnemyDerrived01>();
-	EnemyManager::Instance().Spawn(enemy_00.get());
+	EnemyManager::Instance().Spawn(enemy_00);
 }
 
 
@@ -55,6 +55,8 @@ void SceneGame::Update()
 		Fade::GetInstance()->loading = true;
 		Fade::GetInstance()->SetNextScene(new SceneTitle());
 	}
+
+	EnemyManager::Instance().Update();
 
 	// 更新
 	GameSystem::Instance().Update();
