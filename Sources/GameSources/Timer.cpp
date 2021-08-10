@@ -2,13 +2,13 @@
 #include "Timer.h"
 #include "FrameWork.h"
 
-void Timer::Initialize()
+void Timer::Init()
 {
     Clear();
     //spr_timer = std::make_unique<Sprite>("");
 }
 
-void Timer::UnInitialize()
+void Timer::UnInit()
 {
     Clear();
 }

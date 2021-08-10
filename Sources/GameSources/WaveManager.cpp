@@ -12,13 +12,12 @@ void WaveManager::Init()
     // À‘Ì‚Ì¶¬
     //spr_wave = std::make_unique<Sprite>("");
     timer = std::make_unique<Timer>();
+    p_task = new TaskWave0();
 
     // ‰Šú‰»
     for (WaveClearData& data : wave_resulted) data = {};
     Clear();
 
-    // ƒ^ƒXƒN‚Ìİ’è
-    p_task = new TaskWave0();
 }
 
 

@@ -12,8 +12,8 @@ public:
     ~ScoreManager() {};
 
 public:
-    void Initialize();
-    void UnInitialize();
+    void Init();
+    void UnInit();
     void Update();
     void Render();
 

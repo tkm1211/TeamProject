@@ -7,7 +7,6 @@
 #include "CameraSystem.h"
 #include "SceneTitle.h"
 #include "GameSystem.h"
-#include "WaveManager.h"
 // í«â¡
 #include "EnemyManager.h"
 #include "EnemyDerived01.h"
@@ -35,7 +34,6 @@ void SceneGame::Init()
 	}
 
 	GameSystem::Instance().Init();
-	WaveManager::Instance().Init();
 
 	EnemyManager::Instance().Init();
 
@@ -60,7 +58,6 @@ void SceneGame::Update()
 
 	// çXêV
 	GameSystem::Instance().Update();
-	WaveManager::Instance().Update();
 }
 
 
@@ -74,13 +71,11 @@ void SceneGame::ImGui()
 {
 	ImGui::Text("Scene : Game");
 	GameSystem::Instance().ImGui();
-	WaveManager::Instance().ImGui();
 }
 
 
 void SceneGame::UnInit()
 {
 	GameSystem::Instance().UnInit();
-	WaveManager::Instance().UnInit();
 	testModelData.UnInit();
 }

@@ -11,25 +11,24 @@ void GameSystem::Init()
     // 実体の生成
     timer = std::make_unique<Timer>();
     score_manager = std::make_unique<ScoreManager>();
+    wave_manager = std::make_unique<WaveManager>();
+    combo = std::make_unique<Combo>();
 
     // 初期化処理
-    timer.get()->Initialize();
-    score_manager.get()->Initialize();
+    timer.get()->Init();
+    score_manager.get()->Init();
+    wave_manager.get()->Init();
+    combo.get()->Init();
 }
 
-
-void GameSystem::UnInit()
-{
-    // 終了処理
-    timer.get()->UnInitialize();
-    score_manager.get()->UnInitialize();
-}
 
 void GameSystem::Update()
 {
     // 更新
     timer.get()->Update();
+    combo.get()->Update();
     score_manager.get()->Update();
+    wave_manager.get()->Update();
 }
 
 
@@ -38,9 +37,22 @@ void GameSystem::Render()
     // 描画
     timer.get()->Render();
     score_manager.get()->Render();
+    combo.get()->Render();
+}
+
+
+void GameSystem::UnInit()
+{
+    // 終了処理
+    timer.get()->UnInit();
+    score_manager.get()->UnInit();
+    wave_manager.get()->UnInit();
+    combo.get()->UnInit();
 }
 
 void GameSystem::ImGui()
 {
     ImGui::Text("timer %f", timer.get()->GetNowTime());
+    combo.get()->ImGui();
+    wave_manager.get()->ImGui();
 }

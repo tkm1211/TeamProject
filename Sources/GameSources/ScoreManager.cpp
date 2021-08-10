@@ -2,12 +2,12 @@
 #include "ScoreManager.h"
 
 
-void ScoreManager::Initialize()
+void ScoreManager::Init()
 {
     Clear();
 }
 
-void ScoreManager::UnInitialize()
+void ScoreManager::UnInit()
 {
     Clear();
 }

@@ -16,7 +16,7 @@ struct WaveClearData
 // ウェーブ管理クラス "シングルトン"
 class WaveManager
 {
-private:
+public:
     WaveManager() {};
     ~WaveManager() {};
 
@@ -27,11 +27,6 @@ public:
     void Render();
     void ImGui();
 
-    static WaveManager& Instance()
-    {
-        static WaveManager instance;
-        return instance;
-    }
 
 public: // Get関数
     int GetNowWave() { return wave_state; };
