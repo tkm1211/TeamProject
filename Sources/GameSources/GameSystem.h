@@ -29,8 +29,10 @@ public:
     }
 
 public: // Get関数
-    Timer* GetTimer() { return timer.get(); }
-    ScoreManager* GetScoreManager() { return score_manager.get(); }
+    float GetNowTime() { return timer.get()->GetNowTime(); }
+    float GetScored() { return score_manager.get()->GetScored(); }
+    int GetCombo() { return combo.get()->GetCombo(); }
+    int GetMaxCombo() { return combo.get()->GetMaxCombo(); }
 
 public: // Set関数
     void Clear()
@@ -40,6 +42,7 @@ public: // Set関数
         wave_manager.get()->Clear();
         combo.get()->Clear();
     }
+    void KilledEnemy(float enemy_score);    // 敵を倒したときのスコアとコンボの加算処理
 
 private:
     std::unique_ptr<Timer> timer = nullptr;

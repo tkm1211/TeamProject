@@ -50,9 +50,22 @@ void GameSystem::UnInit()
     combo.get()->UnInit();
 }
 
+
 void GameSystem::ImGui()
 {
     ImGui::Text("timer %f", timer.get()->GetNowTime());
     combo.get()->ImGui();
     wave_manager.get()->ImGui();
+}
+
+
+void GameSystem::KilledEnemy(float enemy_score)
+{
+    combo.get()->AddCombo();
+
+    // コンボ数で倍率変化 (1コンボ増えるたびに0.25倍スコアが上昇する)
+    float now_combo = static_cast<float>(combo.get()->GetCombo());
+    float score_ratio = 1.0f + 0.25f * (1.0f - now_combo);
+
+    score_manager.get()->AddScore(score_ratio * enemy_score);
 }
