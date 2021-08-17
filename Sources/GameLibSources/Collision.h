@@ -41,6 +41,14 @@ public:
 	// 3次元座標上の線分と平面が交差してるかを判定
 	bool detectCollisionLineSegmentAndPlane(DirectX::XMFLOAT3 a, DirectX::XMFLOAT3 b, DirectX::XMFLOAT3 v0, DirectX::XMFLOAT3 v1, DirectX::XMFLOAT3 v2);
 
+
+	// 2次元での矩形と円の衝突判定 & 押し出し 関数
+	bool RectVsCircleAndExtrusion(DirectX::XMFLOAT2 rect_center_position, DirectX::XMFLOAT2 rect_size, DirectX::XMFLOAT2 circle_center_position, float circle_radius, DirectX::XMFLOAT2& outVec);
+
+
+	// 2次元での回転矩形と円の衝突判定 & 押し出し 関数
+	bool RotateRectVsCircleAndExtrusion(DirectX::XMFLOAT2 rect_pos, DirectX::XMFLOAT2 rect_size, float rect_radian, DirectX::XMFLOAT2 circle_pos, float circle_radius, DirectX::XMFLOAT2& circle_out_vec);
+
 private:
 	// 球の中心とカプセルの線分の距離（の二乗）を計算用
 	static float GetSqDistancePoint2Segment(DirectX::XMFLOAT3 point, DirectX::XMFLOAT3 seg_start, DirectX::XMFLOAT3 seg_end, DirectX::XMFLOAT3& dir);
