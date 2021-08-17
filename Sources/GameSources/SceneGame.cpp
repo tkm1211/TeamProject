@@ -64,6 +64,7 @@ void SceneGame::Update()
 void SceneGame::Render()
 {
 	EnemyManager::Instance().Render();
+	GameSystem::Instance().Render();
 }
 
 

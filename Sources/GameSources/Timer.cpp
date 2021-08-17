@@ -5,7 +5,7 @@
 void Timer::Init()
 {
     Clear();
-    //spr_timer = std::make_unique<Sprite>("");
+    spr_timer = std::make_unique<Sprite>(L"Data/Assets/Texture/number.png");
 }
 
 void Timer::UnInit()
@@ -21,37 +21,37 @@ void Timer::Update()
 
 void Timer::Render()
 {
-    if (!spr_timer) return;
+    if (!spr_timer.get()) return;
 
 
     float ones_place = 0.0f, tens_place = 0.0f, hundreds_place = 0.0f;
     SliceDigits(time, ones_place, tens_place, hundreds_place);
 
     // 一文字あたりの縦と横の幅
-    constexpr float number_size_width = 45.0f;
-    constexpr float number_size_height = 60.0f;
+    constexpr float number_size_width = 80.0f;
+    constexpr float number_size_height = 80.0f;
 
     spr_timer.get()->Draw2(
-        0.0f + number_size_width * 2.0f, 0.0f,
-        800, 80,
+        0.0f + number_size_width * 2.0f + 40.0f, 40.0f,
+        80, 80,
         0.0f + number_size_width * ones_place, 0.0f,
-        number_size_width, number_size_width,
+        number_size_width, number_size_height,
         0,
         1, 1, 1, 1);
 
     spr_timer.get()->Draw2(
-        0.0f + number_size_width * 2.0f, 0.0f,
-        800, 80,
+        0.0f + number_size_width * 1.0f + 40.0f, 40.0f,
+        80, 80,
         0.0f + number_size_width * tens_place, 0.0f,
-        number_size_width, number_size_width,
+        number_size_width, number_size_height,
         0,
         1, 1, 1, 1);
 
     spr_timer.get()->Draw2(
-        0.0f + number_size_width * 2.0f, 0.0f,
-        800, 80,
+        0.0f + number_size_width * 0.0f + 40.0f, 40.0f,
+        80, 80,
         0.0f + number_size_width * hundreds_place, 0.0f,
-        number_size_width, number_size_width,
+        number_size_width, number_size_height,
         0,
         1, 1, 1, 1);
 }
@@ -97,7 +97,7 @@ void Timer::SliceDigits(float digits_/*数値*/, float& ones_place/*1の位*/, float
     digits_ += -ones_place/*0.0fを消して値を書き込む*/;
 
 
-    if (digits_ <= 0) return;
+    if (static_cast<int>(digits_) <= 0) return;
     // 0　以外はエラー
     assert(false);
 }
