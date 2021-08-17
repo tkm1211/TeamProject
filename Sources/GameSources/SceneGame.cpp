@@ -21,6 +21,18 @@ void SceneGame::Init()
 	//	testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
 	//}
 
+
+		// モデルの初期化
+	testModel = std::make_unique<Model>("Data/Assets/Model/Player/EX/bullet_box_pi.fbx", false);
+	{
+		//testModel->StartAnimation(1, true); // 引数 : FBX内のアニメーション番号, ループ再生するか？
+		testModelData.Init();
+	}
+
+
+
+
+
 	// すべてのサウンドを停止
 	{
 		AllSoundStop();
@@ -47,12 +59,15 @@ void SceneGame::Update()
 	if (Fade::GetInstance()->loading) return;
 
 	// シーン遷移
-	if (GetAsyncKeyState(VK_SPACE) < 0/*xInput[0].bAt || xInput[0].bBt || xInput[0].bXt || xInput[0].bYt*/)
-	{
-		Fade::GetInstance()->onFadeFlg = true;
-		Fade::GetInstance()->loading = true;
-		Fade::GetInstance()->SetNextScene(new SceneTitle());
-	}
+	//if (GetAsyncKeyState(VK_SPACE) < 0/*xInput[0].bAt || xInput[0].bBt || xInput[0].bXt || xInput[0].bYt*/)
+	//{
+	//	Fade::GetInstance()->onFadeFlg = true;
+	//	Fade::GetInstance()->loading = true;
+	//	Fade::GetInstance()->SetNextScene(new SceneTitle());
+	//}
+
+
+
 
 	EnemyManager::Instance().Update();
 
@@ -64,6 +79,15 @@ void SceneGame::Update()
 void SceneGame::Render()
 {
 	EnemyManager::Instance().Render();
+
+	// モデルの描画
+	{
+		testModel->Preparation(ShaderSystem::GetInstance()->GetShaderOfSkinnedMesh(ShaderSystem::DEFAULT), true);
+		testModel->Render(testModelData.GetWorldMatrix(), CameraSystem::GetInstance()->mainView.GetViewMatrix(), CameraSystem::GetInstance()->mainView.GetProjectionMatrix(),
+			DirectX::XMFLOAT4(0.0f, -1.0f, 1.0f, 0.0f), testModelData.GetColor(), FrameWork::GetInstance().GetElapsedTime());
+	}
+
+
 }
 
 
