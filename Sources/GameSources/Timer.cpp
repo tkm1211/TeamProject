@@ -4,6 +4,7 @@
 
 void Timer::Init()
 {
+    // Tips : Init() = 初期化の時点でCountDown()するかCountUp()するかを設定できると Update()がごちゃごちゃにならずに済む
     Clear();
     spr_timer = std::make_unique<Sprite>(L"Data/Assets/Texture/number.png");
 }
@@ -15,8 +16,75 @@ void Timer::UnInit()
 
 void Timer::Update()
 {
+    static float total_elapsedTime = 0.0f;
+
+    // 詳細 : 「　elapsedTime とは　」
+    /*
+
+       ※ - 仮定,前提 -  ディスプレイが60Hzのもの ※
+
+
+    　　( elapsed "経過" , Time "時間" )
+
+     例 :
+        1フレーム目は (elapsedTime = ) 前フレームから 0.02f 秒で実行！
+        2フレーム目は (elapsedTime = ) 前フレームから 0.22f 秒で実行！
+        3フレーム目は (elapsedTime = ) 前フレームから 0.09f 秒で実行！
+                            ...
+       60フレーム目は (elapsedTime = ) 前フレームから 0.15f 秒で実行！
+
+        1 ~ 60フレーム でかかった合計の秒数(経過時間) = 1.00f 秒
+
+
+
+                        ~~~　まとめ　~~~
+
+        パソコンの状態によってフレームごとにかかった処理時間が変わってしまうが、
+        elapsedTimeの値を使えばパソコンの状態に関わらずに
+        60フレームで1秒と、均一に (今回なら時間を) 計算することができる。
+
+                        ~~~~~~~~~~~~~~
+    */
+
+    // elapsedTime = １フレームあたりの秒数
     float elapsedTime = FrameWork::GetInstance().GetElapsedTime();
-    time += elapsedTime;
+    total_elapsedTime += elapsedTime;
+
+    
+    // total_elapsedTimeが1秒に達したら
+    if (static_cast<int>(total_elapsedTime) == 0) return;
+
+
+    // ↓　時間の更新　↓
+    if (is_countdown/* == true */)
+    {
+        CountDown();
+    }
+
+    else /* if (is_countdown == false) */
+    {
+        CountUp();
+    }
+    
+    // リセット
+    total_elapsedTime = 0.0f;
+
+    // Tips :    上の処理と同じ (? = 三項演算子)
+    // is_countdown ? CountDown() : CountUp();
+}
+
+void Timer::CountUp()
+{
+    time++;
+}
+
+void Timer::CountDown()
+{
+    time--;
+    if (time <= 0)
+    {
+        time = 0;
+    }
 }
 
 void Timer::Render()
