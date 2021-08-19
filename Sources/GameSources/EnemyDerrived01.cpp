@@ -14,4 +14,5 @@ void EnemyDerrived01::Update(const float elapsed_time)
 {
 	// TODO: ’¼üˆÚ“®ˆ—
 	// ƒqƒ“ƒg : pos‚ğg—p
+	
 }

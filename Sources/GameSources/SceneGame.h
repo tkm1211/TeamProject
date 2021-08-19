@@ -8,6 +8,7 @@
 #include "Scene.h"
 #include "Model.h"
 
+#include "Stage.h"
 
 class SceneGame : public Scene
 {
@@ -15,6 +16,8 @@ private:
 	// •Ï”‚ÌéŒ¾
 	std::unique_ptr<Model> testModel;
 	OBJ3D testModelData;
+
+	Stage stage;
 
 public:
 	void Init();
