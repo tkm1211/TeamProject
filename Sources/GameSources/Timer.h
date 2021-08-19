@@ -7,7 +7,7 @@
 class Timer
 {
 public:
-    Timer() {};
+    Timer(bool is_countdown_ = false) : is_countdown(is_countdown_) {};
     ~Timer() {};
 
 public:
@@ -26,8 +26,8 @@ public: // Set関数
 private:
     // クラス内だけで使える関数 (クラスの外では関数が呼び出せない、使えない)
     void SliceDigits(float digits_, float& ones_place, float& tens_place, float& hundreds_place);
-    void CountUp();
-    void CountDown();
+    void CountUp(float elapsedTime);
+    void CountDown(float elapsedTime);
 
 private:
     float time = 0.0f;

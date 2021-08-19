@@ -16,7 +16,6 @@ void Timer::UnInit()
 
 void Timer::Update()
 {
-    static float total_elapsedTime = 0.0f;
 
     // 詳細 : 「　elapsedTime とは　」
     /*
@@ -48,39 +47,34 @@ void Timer::Update()
 
     // elapsedTime = １フレームあたりの秒数
     float elapsedTime = FrameWork::GetInstance().GetElapsedTime();
-    total_elapsedTime += elapsedTime;
-
-    
-    // total_elapsedTimeが1秒に達したら
-    if (static_cast<int>(total_elapsedTime) == 0) return;
 
 
     // ↓　時間の更新　↓
     if (is_countdown/* == true */)
     {
-        CountDown();
+        CountDown(elapsedTime);
     }
 
     else /* if (is_countdown == false) */
     {
-        CountUp();
+        CountUp(elapsedTime);
     }
-    
-    // リセット
-    total_elapsedTime = 0.0f;
 
     // Tips :    上の処理と同じ (? = 三項演算子)
     // is_countdown ? CountDown() : CountUp();
 }
 
-void Timer::CountUp()
+void Timer::CountUp(float elapsedTime)
 {
-    time++;
+    //time++;
+    time += elapsedTime;
 }
 
-void Timer::CountDown()
+void Timer::CountDown(float elapsedTime)
 {
-    time--;
+    //time--;
+    time += -elapsedTime;
+
     if (time <= 0)
     {
         time = 0;

@@ -9,13 +9,14 @@
 void GameSystem::Init()
 {
     // À‘Ì‚Ì¶¬
-    timer = std::make_unique<Timer>();
+    timer = std::make_unique<Timer>(true);
     score_manager = std::make_unique<ScoreManager>();
     wave_manager = std::make_unique<WaveManager>();
     combo = std::make_unique<Combo>();
 
     // ‰Šú‰»ˆ—
     timer.get()->Init();
+    timer.get()->SetTime(300);
     score_manager.get()->Init();
     wave_manager.get()->Init();
     combo.get()->Init();
