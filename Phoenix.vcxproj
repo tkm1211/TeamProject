@@ -65,6 +65,7 @@
     <ClCompile Include="Sources\GameLibSources\Texture.cpp" />
     <ClCompile Include="Sources\GameSources\Audio.cpp" />
     <ClCompile Include="Sources\GameSources\CameraControl.cpp" />
+    <ClCompile Include="Sources\GameSources\Combo.cpp" />
     <ClCompile Include="Sources\GameSources\easing.cpp" />
     <ClCompile Include="Sources\GameSources\Enemy.cpp" />
     <ClCompile Include="Sources\GameSources\EnemyDerrived01.cpp" />
@@ -119,6 +120,7 @@
     <ClInclude Include="Sources\GameSources\Audio.h" />
     <ClInclude Include="Sources\GameSources\CameraControl.h" />
     <ClInclude Include="Sources\GameSources\CameraSystem.h" />
+    <ClInclude Include="Sources\GameSources\Combo.h" />
     <ClInclude Include="Sources\GameSources\easing.h" />
     <ClInclude Include="Sources\GameSources\Enemy.h" />
     <ClInclude Include="Sources\GameSources\EnemyDerived01.h" />

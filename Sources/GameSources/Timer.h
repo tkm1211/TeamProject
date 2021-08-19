@@ -11,8 +11,8 @@ public:
     ~Timer() {};
 
 public:
-    void Initialize();
-    void UnInitialize();
+    void Init();
+    void UnInit();
     void Update();
     void Render();
 
@@ -21,6 +21,10 @@ public: // Get関数
 
 public: // Set関数
     void Clear() { time = 0.0f; }
+
+private:
+    // クラス内だけで使える関数 (クラスの外では関数が呼び出せない、使えない)
+    void SliceDigits(float digits_, float& ones_place, float& tens_place, float& hundreds_place);
 
 private:
     float time = 0.0f;

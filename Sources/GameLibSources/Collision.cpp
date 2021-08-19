@@ -661,6 +661,103 @@ bool Collision::detectCollisionLineSegmentAndPlane(DirectX::XMFLOAT3 a, DirectX:
 }
 
 
+//******************************************************
+//矩形　vs　円
+//******************************************************
+bool Collision::RectVsCircleAndExtrusion(DirectX::XMFLOAT2 rect_center_position, DirectX::XMFLOAT2 rect_size, DirectX::XMFLOAT2 circle_center_position, float circle_radius, DirectX::XMFLOAT2& outVec)
+{
+	auto ClampOnRange = [](const float num, const float min, const float max) -> float
+	{
+		if (num < min) return min;
+		if (num > max) return max;
+
+		return num;
+	};
+	// 矩形の最小点と最大点
+	DirectX::XMFLOAT2 min = { rect_center_position.x - rect_size.x * 0.5f, rect_center_position.y - rect_size.y * 0.5f };
+	DirectX::XMFLOAT2 max = { rect_center_position.x + rect_size.x * 0.5f, rect_center_position.y + rect_size.y * 0.5f };
+
+
+	// 矩形内で円の中心点に最も近い点を算出する
+	DirectX::XMFLOAT2 rect_point_pos = {};
+	rect_point_pos.x = ClampOnRange(circle_center_position.x, min.x, max.x);
+	rect_point_pos.y = ClampOnRange(circle_center_position.y, min.y, max.y);
+
+	// 最近点と円で衝突判定をする
+	DirectX::XMVECTOR vec_circle_to_rect_point = DirectX::XMLoadFloat2(&DirectX::XMFLOAT2({ rect_point_pos.x - circle_center_position.x,rect_point_pos.y - circle_center_position.y }));
+	float length;
+	DirectX::XMStoreFloat(&length, DirectX::XMVector2Length(vec_circle_to_rect_point));
+
+	if (circle_radius <= length)
+	{
+		// 衝突していない
+		return false;
+	}
+
+	// 衝突していたら... //
+
+	// 矩形の内部までめり込んでしまっていたら
+	// """""""""""""""""""""""""""""""""ここ**雑**""""""""""""""""""""""""""""""
+	if (length <= 0.0f)
+	{
+		float temp_length[2] = {};
+		DirectX::XMVECTOR vec = DirectX::XMLoadFloat2(&DirectX::XMFLOAT2({ min.x - circle_center_position.x, min.y - circle_center_position.y }));
+		DirectX::XMStoreFloat(&temp_length[0], DirectX::XMVector2Length(vec));
+
+		vec = DirectX::XMLoadFloat2(&DirectX::XMFLOAT2({ max.x - circle_center_position.x, max.y - circle_center_position.y }));
+		DirectX::XMStoreFloat(&temp_length[1], DirectX::XMVector2Length(vec));
+
+		if (temp_length[0] < temp_length[1])
+		{
+			length = temp_length[0];
+			vec_circle_to_rect_point = { min.x - circle_center_position.x, min.y - circle_center_position.y };
+		}
+
+		else
+		{
+			length = temp_length[1];
+			vec_circle_to_rect_point = { max.x - circle_center_position.x, max.y - circle_center_position.y };
+		}
+	}
+
+	// めり込んでる距離を計算
+	length = circle_radius - length;
+
+	// めり込んでいる分押し出しするベクトルを代入
+	DirectX::XMFLOAT2 n_vec;
+	DirectX::XMStoreFloat2(&n_vec, DirectX::XMVector2Normalize(vec_circle_to_rect_point));
+	
+	outVec = { -n_vec.x * length,-n_vec.y * length };
+
+	return true;
+}
+
+//******************************************************
+//回転矩形　vs　円
+//******************************************************
+bool Collision::RotateRectVsCircleAndExtrusion(DirectX::XMFLOAT2 rect_pos, DirectX::XMFLOAT2 rect_size, float rect_radian, DirectX::XMFLOAT2 circle_pos, float circle_radius, DirectX::XMFLOAT2& circle_out_vec)
+{
+	// 原点を頂点に持つ判定を取る矩形と同じ大きさで回転していない矩形を作る(頂点を算出する)
+	DirectX::XMFLOAT2 hypothesis_rect_center = { rect_size.x * 0.5f, rect_size.y * 0.5f };
+
+
+	DirectX::XMFLOAT2 vec_rect_c_to_circle_c = { circle_pos.x - rect_pos.x, circle_pos.y - rect_pos.y };
+	float inverce_rect_radian = -rect_radian; // 逆回転させる
+	DirectX::XMFLOAT2 rotate_vec = { vec_rect_c_to_circle_c.x * cosf(inverce_rect_radian) - vec_rect_c_to_circle_c.y * sinf(inverce_rect_radian), vec_rect_c_to_circle_c.x * sinf(inverce_rect_radian) + vec_rect_c_to_circle_c.y * cosf(inverce_rect_radian) };
+
+	// 作った矩形と実際の円の位置と相対的に同じ位置の円をつくる
+	DirectX::XMFLOAT2 hypothesis_circle_pos = { rotate_vec.x + hypothesis_rect_center.x, rotate_vec.y + hypothesis_rect_center.y };
+
+	if (RectVsCircleAndExtrusion(hypothesis_rect_center, rect_size, hypothesis_circle_pos, circle_radius, circle_out_vec))
+	{
+		circle_out_vec = { circle_out_vec.x * cosf(rect_radian) - circle_out_vec.y * sinf(rect_radian), circle_out_vec.x * sinf(rect_radian) + circle_out_vec.y * cosf(rect_radian) };
+		return true;
+	}
+
+	return false;
+}
+
+
 CollisionPrimitive::CollisionPrimitive( int type, bool isCreateBottom, DirectX::XMFLOAT3 _collisionScale)
 {
 	Microsoft::WRL::ComPtr<ID3D11Device> device = FrameWork::GetInstance().GetDevice();

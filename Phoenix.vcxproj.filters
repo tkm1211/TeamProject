@@ -249,7 +249,7 @@
     <ClCompile Include="Sources\GameSources\Enemy.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\GameSources\Stage.cpp">
+    <ClCompile Include="Sources\GameSources\Combo.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -341,9 +341,6 @@
     <ClInclude Include="Sources\GameLibSources\Camera.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\GameLibSources\Collision.h">
-      <Filter>Game\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Sources\GameLibSources\OBJ3D.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
@@ -413,8 +410,11 @@
     <ClInclude Include="Sources\GameSources\EnemyDerived01.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\GameSources\Stage.h">
+    <ClInclude Include="Sources\GameSources\Combo.h">
       <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Collision.h">
+      <Filter>Library\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

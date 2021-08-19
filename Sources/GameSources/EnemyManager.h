@@ -2,7 +2,7 @@
 
 #include <memory>
 #include <vector>
-class Enemy;
+#include "Enemy.h"
 
 
 // 敵管理クラス "シングルトン"

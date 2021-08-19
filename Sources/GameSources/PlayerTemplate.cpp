@@ -17,6 +17,7 @@ void PlayerTemplate::Init()
 	itemData.Init();
 	itemData.SetScale({ 10.0f,10.0f,10.0f });
 
+
 	modelState = ModelState::WAIT;
 
 	// New Get bonetransform

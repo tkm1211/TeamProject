@@ -11,25 +11,24 @@ void GameSystem::Init()
     // 実体の生成
     timer = std::make_unique<Timer>();
     score_manager = std::make_unique<ScoreManager>();
+    wave_manager = std::make_unique<WaveManager>();
+    combo = std::make_unique<Combo>();
 
     // 初期化処理
-    timer.get()->Initialize();
-    score_manager.get()->Initialize();
+    timer.get()->Init();
+    score_manager.get()->Init();
+    wave_manager.get()->Init();
+    combo.get()->Init();
 }
 
-
-void GameSystem::UnInit()
-{
-    // 終了処理
-    timer.get()->UnInitialize();
-    score_manager.get()->UnInitialize();
-}
 
 void GameSystem::Update()
 {
     // 更新
     timer.get()->Update();
+    combo.get()->Update();
     score_manager.get()->Update();
+    wave_manager.get()->Update();
 }
 
 
@@ -38,9 +37,35 @@ void GameSystem::Render()
     // 描画
     timer.get()->Render();
     score_manager.get()->Render();
+    combo.get()->Render();
 }
+
+
+void GameSystem::UnInit()
+{
+    // 終了処理
+    timer.get()->UnInit();
+    score_manager.get()->UnInit();
+    wave_manager.get()->UnInit();
+    combo.get()->UnInit();
+}
+
 
 void GameSystem::ImGui()
 {
     ImGui::Text("timer %f", timer.get()->GetNowTime());
+    combo.get()->ImGui();
+    wave_manager.get()->ImGui();
+}
+
+
+void GameSystem::KilledEnemy(float enemy_score)
+{
+    combo.get()->AddCombo();
+
+    // コンボ数で倍率変化 (1コンボ増えるたびに0.25倍スコアが上昇する)
+    float now_combo = static_cast<float>(combo.get()->GetCombo());
+    float score_ratio = 1.0f + 0.25f * (1.0f - now_combo);
+
+    score_manager.get()->AddScore(score_ratio * enemy_score);
 }
