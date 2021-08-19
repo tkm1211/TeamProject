@@ -33,6 +33,7 @@ public: // GetŠÖ”
     float GetScored() { return score_manager.get()->GetScored(); }
     int GetCombo() { return combo.get()->GetCombo(); }
     int GetMaxCombo() { return combo.get()->GetMaxCombo(); }
+    float GetWaveClearTime(int index) { return wave_manager.get()->GetWaveClearData(index).clear_time; }
 
 public: // SetŠÖ”
     void Clear()
