@@ -5,7 +5,7 @@
 #include "Sprite.h"
 #include "Timer.h"
 #include "Task.h"
-
+class Enemy;
 
 
 // ウェーブ管理クラス
@@ -58,6 +58,7 @@ private:
     static constexpr int wave_max = 3;              // 最大ウェーブ数 (0, 1 ~ 3)
     // 変数
     int wave_state = wave_default;                  // 現在のウェーブ
+    float old_wave_time = 0.0f;                     // 前回出現させたときの時間
     std::unique_ptr<Timer> timer = nullptr;         // ウェーブの経過時間
     std::unique_ptr<Sprite> spr_wave = nullptr;     // ウェーブの数字用スプライト
     std::map<int, std::shared_ptr<Enemy>> create_enemy = {}; // 敵の生成用

@@ -81,7 +81,7 @@ void Timer::CountDown(float elapsedTime)
     }
 }
 
-void Timer::Render()
+void Timer::Render(const DirectX::XMFLOAT2 pos)
 {
     if (!spr_timer.get()) return;
 
@@ -94,7 +94,7 @@ void Timer::Render()
     constexpr float number_size_height = 80.0f;
 
     spr_timer.get()->Draw2(
-        0.0f + number_size_width * 2.0f + 40.0f, 40.0f,
+        pos.x + number_size_width * 2.0f + 40.0f, pos.y,
         80, 80,
         0.0f + number_size_width * ones_place, 0.0f,
         number_size_width, number_size_height,
@@ -102,7 +102,7 @@ void Timer::Render()
         1, 1, 1, 1);
 
     spr_timer.get()->Draw2(
-        0.0f + number_size_width * 1.0f + 40.0f, 40.0f,
+        pos.x + number_size_width * 1.0f + 40.0f, pos.y,
         80, 80,
         0.0f + number_size_width * tens_place, 0.0f,
         number_size_width, number_size_height,
@@ -110,7 +110,7 @@ void Timer::Render()
         1, 1, 1, 1);
 
     spr_timer.get()->Draw2(
-        0.0f + number_size_width * 0.0f + 40.0f, 40.0f,
+        pos.x + number_size_width * 0.0f + 40.0f, pos.y,
         80, 80,
         0.0f + number_size_width * hundreds_place, 0.0f,
         number_size_width, number_size_height,

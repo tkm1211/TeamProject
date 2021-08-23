@@ -11,7 +11,7 @@
 void WaveManager::Init()
 {
     // 実体の生成
-    //spr_wave = std::make_unique<Sprite>("");
+    spr_wave = std::make_unique<Sprite>(L"Data/Assets/Texture/wave.png");
     timer = std::make_unique<Timer>();
     p_task = new TaskWave0();
 
@@ -27,7 +27,7 @@ void WaveManager::Init()
 void WaveManager::Update()
 {
     // 最終ウェーブをクリアすれば更新しない
-    if (wave_state >= wave_max) return;
+    if (wave_state > wave_max) return;
 
     // 経過時間の更新
     timer.get()->Update();
@@ -42,13 +42,29 @@ void WaveManager::Update()
 
 void WaveManager::Render()
 {
+    constexpr float end_time_second = 2.0f;
+    if (wave_state - 1 < 0)return;
+    if (timer.get()->GetNowTime() > end_time_second) return;
+
+
+    constexpr float width = 400.0f;
+    constexpr float height = 280.0f;
+
     // 現在のウェーブ数を表示
+    spr_wave.get()->Draw2(
+        640, 300,
+        width, height,
+        0.0f, 0.0f + height * static_cast<float>(wave_state - 1),
+        width, height,
+        0,
+        1, 1, 1, 1);
 }
 
 
 void WaveManager::ImGui()
 {
     ImGui::Text("wave_state : %d", wave_state);
+    ImGui::Text("total enemy : %d", EnemyManager::Instance().GetEnemyTotalCount());
 }
 
 
@@ -62,6 +78,7 @@ void WaveManager::UnInit()
 void WaveManager::Clear()
 {
     timer.get()->Clear();
+    old_wave_time = 0.0f;
     wave_state = wave_default;
 }
 
@@ -72,7 +89,7 @@ void WaveManager::SetEnemyData()
     {
         false,
         3,
-        3.0f
+        2.0f
     };
 
     wave_enemy_data[1] =
@@ -107,6 +124,7 @@ void WaveManager::NextWave()
     EnemyManager::Instance().Clear();
     // 時間のリセット
     timer.get()->Clear();
+    old_wave_time = 0.0f;
      
     // 次のウェーブにする
     wave_state++;
@@ -165,8 +183,6 @@ void WaveManager::SpawnEnemy()
     if (EnemyManager::Instance().GetEnemyTotalCount() >= wave_enemy_data[wave_state].enemy_max) return;
 
 
-    // 前回出現させたときの時間
-    static float old_wave_time = 0.0f;
 
     float subtruct_time = timer.get()->GetNowTime() - old_wave_time;
 

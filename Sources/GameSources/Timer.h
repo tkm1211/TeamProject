@@ -14,7 +14,7 @@ public:
     void Init();
     void UnInit();
     void Update();
-    void Render();
+    void Render(const DirectX::XMFLOAT2 pos = {});
 
 public: // Getä÷êî
     float GetNowTime() { return time; }
