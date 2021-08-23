@@ -51,4 +51,5 @@ private:
     std::unique_ptr<WaveManager> wave_manager = nullptr;
     std::unique_ptr<Combo> combo = nullptr;
 
+    std::unique_ptr<Sprite> spr_ui_time_score = nullptr;
 };
