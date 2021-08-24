@@ -29,13 +29,13 @@ protected:
 
 public:
 	OBJ3D() :
-		pos( 0.0f, 0.0f, 0.0f ),
-		speed( 0.0f, 0.0f, 0.0f ),
-		scale( 1.0f, 1.0f, 1.0f ),
-		angle( 0.0f, 0.0f, 0.0f ),
-		color( 1.0f, 1.0f, 1.0f, 1.0f ),
-		adjust( 0.0f, 0.0f, 0.0f ),
-		exists( false )
+		pos(0.0f, 0.0f, 0.0f),
+		speed(0.0f, 0.0f, 0.0f),
+		scale(1.0f, 1.0f, 1.0f),
+		angle(0.0f, 0.0f, 0.0f),
+		color(1.0f, 1.0f, 1.0f, 1.0f),
+		adjust(0.0f, 0.0f, 0.0f),
+		exists(false)
 	{}
 	~OBJ3D() 
 	{

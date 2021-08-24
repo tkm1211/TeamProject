@@ -34,8 +34,8 @@ void SceneTitle::Init()
 
 	// サウンドの再生
 	{
-		PlaySoundMem(SoundLoader::GetInstance()->bgm.get()); // ループ再生
-		PlaySoundMem(SoundLoader::GetInstance()->se.get()); // 単発再生
+		//PlaySoundMem(SoundLoader::GetInstance()->bgm.get()); // ループ再生
+		//PlaySoundMem(SoundLoader::GetInstance()->se.get()); // 単発再生
 	}
 }
 

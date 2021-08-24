@@ -65,6 +65,7 @@
     <ClCompile Include="Sources\GameLibSources\Texture.cpp" />
     <ClCompile Include="Sources\GameSources\Audio.cpp" />
     <ClCompile Include="Sources\GameSources\CameraControl.cpp" />
+    <ClCompile Include="Sources\GameSources\Combo.cpp" />
     <ClCompile Include="Sources\GameSources\easing.cpp" />
     <ClCompile Include="Sources\GameSources\Enemy.cpp" />
     <ClCompile Include="Sources\GameSources\EnemyDerrived01.cpp" />
@@ -77,6 +78,7 @@
     <ClCompile Include="Sources\GameSources\SceneTitle.cpp" />
     <ClCompile Include="Sources\GameSources\ScoreManager.cpp" />
     <ClCompile Include="Sources\GameSources\SoundLoader.cpp" />
+    <ClCompile Include="Sources\GameSources\Stage.cpp" />
     <ClCompile Include="Sources\GameSources\Task.cpp" />
     <ClCompile Include="Sources\GameSources\Timer.cpp" />
     <ClCompile Include="Sources\GameSources\WaveManager.cpp" />
@@ -118,6 +120,7 @@
     <ClInclude Include="Sources\GameSources\Audio.h" />
     <ClInclude Include="Sources\GameSources\CameraControl.h" />
     <ClInclude Include="Sources\GameSources\CameraSystem.h" />
+    <ClInclude Include="Sources\GameSources\Combo.h" />
     <ClInclude Include="Sources\GameSources\easing.h" />
     <ClInclude Include="Sources\GameSources\Enemy.h" />
     <ClInclude Include="Sources\GameSources\EnemyDerived01.h" />
@@ -132,6 +135,7 @@
     <ClInclude Include="Sources\GameSources\SceneTitle.h" />
     <ClInclude Include="Sources\GameSources\ScoreManager.h" />
     <ClInclude Include="Sources\GameSources\SoundLoader.h" />
+    <ClInclude Include="Sources\GameSources\Stage.h" />
     <ClInclude Include="Sources\GameSources\Task.h" />
     <ClInclude Include="Sources\GameSources\Timer.h" />
     <ClInclude Include="Sources\GameSources\WaveManager.h" />
