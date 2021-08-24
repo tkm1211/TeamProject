@@ -13,9 +13,6 @@ public:
 
 protected:
 	std::shared_ptr<Model> model{ nullptr };
-<<<<<<< HEAD
+
 	int timer=0;
-=======
-	int timer;
->>>>>>> 38e2fae63bf96a464e169d65347fd1938a25bec3
 };
