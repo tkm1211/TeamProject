@@ -18,6 +18,7 @@ void EnemyDerrived01::Update(const float elapsed_time)
 	// TODO: ’¼üˆÚ“®ˆ—
 	// ƒqƒ“ƒg : pos‚ğg—p
 	
+<<<<<<< HEAD
 
 	pos.z--;
 	pos.x += speed.x;
@@ -29,4 +30,6 @@ void EnemyDerrived01::Update(const float elapsed_time)
 	
 	timer++;
 	
+=======
+>>>>>>> a30e87e98fc724fbd67a4ab87e056761db0424cb
 }

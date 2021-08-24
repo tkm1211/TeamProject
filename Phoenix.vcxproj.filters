@@ -341,9 +341,6 @@
     <ClInclude Include="Sources\GameLibSources\Camera.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\GameLibSources\Collision.h">
-      <Filter>Game\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Sources\GameLibSources\OBJ3D.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
@@ -415,6 +412,9 @@
     </ClInclude>
     <ClInclude Include="Sources\GameSources\Combo.h">
       <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameLibSources\Collision.h">
+      <Filter>Library\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

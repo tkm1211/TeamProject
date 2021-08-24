@@ -33,6 +33,7 @@ public: // Getä÷êî
     float GetScored() { return score_manager.get()->GetScored(); }
     int GetCombo() { return combo.get()->GetCombo(); }
     int GetMaxCombo() { return combo.get()->GetMaxCombo(); }
+    float GetWaveClearTime(int index) { return wave_manager.get()->GetWaveClearData(index).clear_time; }
 
 public: // Setä÷êî
     void Clear()
@@ -50,4 +51,5 @@ private:
     std::unique_ptr<WaveManager> wave_manager = nullptr;
     std::unique_ptr<Combo> combo = nullptr;
 
+    std::unique_ptr<Sprite> spr_ui_time_score = nullptr;
 };
