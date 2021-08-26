@@ -17,7 +17,6 @@ void WaveManager::Init()
 
     // 初期化
     SetEnemyData();
-    SetCreateEnemy();
     for (ClearData& data : wave_resulted) data = {};
     Clear();
 
@@ -71,7 +70,6 @@ void WaveManager::ImGui()
 void WaveManager::UnInit()
 {
     Clear();
-    create_enemy.clear();
 }
 
 
@@ -192,21 +190,15 @@ void WaveManager::SpawnEnemy()
     // TODO : 生成する敵の種類を増やす
     constexpr int enemy_of_kinds = 1;
     int random = rand() % enemy_of_kinds;
+
+    // TODO : 敵の種類が増えたら増やす！！！
+    std::shared_ptr<Enemy> enemy = nullptr;
+    if (random == 0) enemy = std::make_shared<EnemyDerrived01>();
+    //if (random == 1) enemy = std::make_shared<EnemyDerrived02>();
+
+    if (!enemy) return;
     //　出現させる
-    EnemyManager::Instance().Spawn(create_enemy[random]);
+    EnemyManager::Instance().Spawn(enemy);
 
     old_wave_time = timer.get()->GetNowTime();
-}
-
-
-void WaveManager::SetCreateEnemy()
-{
-    std::shared_ptr<Enemy> enemy = nullptr;
-
-    // 横移動
-    enemy = std::make_shared<EnemyDerrived01>();
-    create_enemy.emplace(0, enemy);
-
-    //enemy = std::make_shared< >();
-    //create_enemy.emplace(1, enemy);
 }

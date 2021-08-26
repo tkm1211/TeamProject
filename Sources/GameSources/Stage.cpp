@@ -7,7 +7,7 @@
 void Stage::Init()
 {
 	// ƒ‚ƒfƒ‹‚Ì‰Šú‰»
-	StageModel = std::make_unique<Model>("Data/Assets/Model/Stage/stage.fbx", false);
+	StageModel = std::make_unique<Model>("./Data/Assets/Model/Stage/stage.fbx", false);
 	{
 		StageData.Init();
 	}

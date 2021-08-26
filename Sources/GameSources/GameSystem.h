@@ -44,6 +44,7 @@ public: // Set関数
         combo.get()->Clear();
     }
     void KilledEnemy(float enemy_score);    // 敵を倒したときのスコアとコンボの加算処理
+    // TODO: スタミナどうする???????　 player側かGameSystem側か  
 
 private:
     std::unique_ptr<Timer> timer = nullptr;

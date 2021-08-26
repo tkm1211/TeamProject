@@ -30,11 +30,8 @@ void SceneGame::Init()
 
 	GameSystem::Instance().Init();
 
-	EnemyManager::Instance().Init();
+	EnemyManager::Instance().Init(/*TODO: プレイヤーの現在位置のアドレスを入れる*/);
 	stage.Init();
-
-	std::shared_ptr<Enemy> enemy_00 = std::make_shared<EnemyDerrived01>();
-	EnemyManager::Instance().Spawn(enemy_00);
 }
 
 
