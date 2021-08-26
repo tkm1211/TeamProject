@@ -721,7 +721,7 @@ bool Collision::RectVsCircleAndExtrusion(DirectX::XMFLOAT2 rect_center_position,
 	}
 
 	// めり込んでる距離を計算
-	float length = circle_radius - length;
+	length = circle_radius - length;
 
 	// めり込んでいる分押し出しするベクトルを代入
 	DirectX::XMFLOAT2 n_vec;

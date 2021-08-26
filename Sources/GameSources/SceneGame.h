@@ -7,14 +7,28 @@
 
 #include "Scene.h"
 #include "Model.h"
-
+#include"Player.h"
 
 class SceneGame : public Scene
 {
 private:
 	// •Ï”‚ÌéŒ¾
-	std::unique_ptr<Model> testModel;
-	OBJ3D testModelData;
+
+	std::unique_ptr<Player> playerModel;
+
+	std::unique_ptr<Camera> playerCamera;
+
+
+	 float  Ti = 0;
+
+
+	 float gravity = -1;
+	 int dash = 1;
+
+
+
+
+
 
 public:
 	void Init();

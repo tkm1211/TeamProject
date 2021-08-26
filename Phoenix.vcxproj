@@ -72,7 +72,9 @@
     <ClCompile Include="Sources\GameSources\EnemyManager.cpp" />
     <ClCompile Include="Sources\GameSources\Fade.cpp" />
     <ClCompile Include="Sources\GameSources\GameSystem.cpp" />
+    <ClCompile Include="Sources\GameSources\Player.cpp" />
     <ClCompile Include="Sources\GameSources\PlayerTemplate.cpp" />
+    <ClCompile Include="Sources\GameSources\Projectile.cpp" />
     <ClCompile Include="Sources\GameSources\SceneGame.cpp" />
     <ClCompile Include="Sources\GameSources\SceneManager.cpp" />
     <ClCompile Include="Sources\GameSources\SceneTitle.cpp" />
@@ -127,7 +129,9 @@
     <ClInclude Include="Sources\GameSources\Fade.h" />
     <ClInclude Include="Sources\GameSources\GameSystem.h" />
     <ClInclude Include="Sources\GameSources\Kokim.h" />
+    <ClInclude Include="Sources\GameSources\Player.h" />
     <ClInclude Include="Sources\GameSources\PlayerTemplate.h" />
+    <ClInclude Include="Sources\GameSources\Projectile.h" />
     <ClInclude Include="Sources\GameSources\Scene.h" />
     <ClInclude Include="Sources\GameSources\SceneGame.h" />
     <ClInclude Include="Sources\GameSources\SceneManager.h" />
