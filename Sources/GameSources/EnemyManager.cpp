@@ -4,8 +4,9 @@
 #include <algorithm>
 
 
-void EnemyManager::Init()
+void EnemyManager::Init(DirectX::XMFLOAT3* player_pos)
 {
+    player_position = player_pos;
     Clear();
 }
 
@@ -67,4 +68,10 @@ void EnemyManager::Clear()
     // vectorƒRƒ“ƒeƒi‚Ì‰ð•ú
     enemies.clear();
     removes.clear();
+}
+
+void EnemyManager::Spawn(std::shared_ptr<Enemy>& enemy_)
+{
+    enemy_.get()->SetPlayerPosition(player_position);
+    enemies.emplace_back(enemy_);
 }

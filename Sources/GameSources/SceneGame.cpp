@@ -14,13 +14,6 @@
 
 void SceneGame::Init()
 {
-	testModel = std::make_unique<Model>("Data/Assets/Model/player_anime.fbx", false);
-	{
-		testModel->StartAnimation(2, true);
-		testModelData.Init();
-		testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
-	}
-
 	// すべてのサウンドを停止
 	{
 		AllSoundStop();
@@ -35,11 +28,8 @@ void SceneGame::Init()
 
 	GameSystem::Instance().Init();
 
-	EnemyManager::Instance().Init();
+	EnemyManager::Instance().Init(/*TODO: プレイヤーの現在位置のアドレスを入れる*/);
 	stage.Init();
-
-	std::shared_ptr<Enemy> enemy_00 = std::make_shared<EnemyDerrived01>();
-	EnemyManager::Instance().Spawn(enemy_00);
 }
 
 
@@ -80,6 +70,5 @@ void SceneGame::ImGui()
 void SceneGame::UnInit()
 {
 	GameSystem::Instance().UnInit();
-	testModelData.UnInit();
 	stage.UnInit();
 }
