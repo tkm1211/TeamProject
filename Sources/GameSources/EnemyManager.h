@@ -13,7 +13,7 @@ private:
     ~EnemyManager() {};
 
 public:
-    void Init();
+    void Init(DirectX::XMFLOAT3* player_pos = nullptr);
     void UnInit();
     void Update();
     void Render();
@@ -30,8 +30,9 @@ public: // Getä÷êî
 
 public: // Setä÷êî
     void Clear();
-    void Spawn(std::shared_ptr<Enemy>& enemy_) { enemies.emplace_back(enemy_); }
+    void Spawn(std::shared_ptr<Enemy>& enemy_);
     void Remove(Enemy* enemy_) { removes.emplace_back(enemy_); }
+
 
 private:
     void EnemyUpdate();
@@ -40,4 +41,6 @@ private:
 private:
     std::vector<std::shared_ptr<Enemy>> enemies = {};
     std::vector<std::shared_ptr<Enemy>> removes = {};
+
+    DirectX::XMFLOAT3* player_position = {};
 };

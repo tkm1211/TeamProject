@@ -50,7 +50,6 @@ private:
     bool JudgeTaskComplete();
     void ChangeNextTask();
     void SpawnEnemy();
-    void SetCreateEnemy();
 
 private:
     // 定数
@@ -61,7 +60,6 @@ private:
     float old_wave_time = 0.0f;                     // 前回出現させたときの時間
     std::unique_ptr<Timer> timer = nullptr;         // ウェーブの経過時間
     std::unique_ptr<Sprite> spr_wave = nullptr;     // ウェーブの数字用スプライト
-    std::map<int, std::shared_ptr<Enemy>> create_enemy = {}; // 敵の生成用
     SpawnEnemyData wave_enemy_data[wave_max + 1] = {};      // ウェーブごとの敵の出現設定
     ClearData wave_resulted[wave_max + 1] = {};             // ウェーブごとのクリアタイムなどのデータ
     Task* p_task = nullptr;                                 // タスク

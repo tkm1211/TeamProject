@@ -1,0 +1,20 @@
+diff a/Sources/GameSources/SceneGame.cpp b/Sources/GameSources/SceneGame.cpp	(rejected hunks)
+@@ -21,6 +21,18 @@
+ 	//	testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
+ 	//}
+ 
++
++		// ���f���̏�����
++	testModel = std::make_unique<Model>("Data/Assets/Model/Player/EX/bullet_box_pi.fbx", false);
++	{
++		//testModel->StartAnimation(1, true); // ���� : FBX��̃A�j���[�V�����ԍ�, ���[�v�Đ����邩�H
++		testModelData.Init();
++	}
++
++
++
++
++
+ 	// ���ׂẴT�E���h���~
+ 	{
+ 		AllSoundStop();
