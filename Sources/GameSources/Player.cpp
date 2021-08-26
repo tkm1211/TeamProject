@@ -16,6 +16,12 @@ Player::Player() : OBJ3D()
 		Init();
 	}
 
+	//testModel = std::make_unique<Model>("Data/Assets/Model/player_anime.fbx", false);
+	//{
+	//	testModel->StartAnimation(2, true);
+	//	//testModelData.Init();
+	//	//testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
+	//}
 
 
 
