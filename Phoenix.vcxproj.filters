@@ -252,6 +252,12 @@
     <ClCompile Include="Sources\GameSources\Combo.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\GameSources\Player.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\Projectile.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Library\DirectXTex-master\DirectXTex\BC.h">
@@ -415,6 +421,12 @@
     </ClInclude>
     <ClInclude Include="Sources\GameLibSources\Collision.h">
       <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Player.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Projectile.h">
+      <Filter>Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
