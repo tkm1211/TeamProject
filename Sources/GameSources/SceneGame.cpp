@@ -14,12 +14,12 @@
 
 void SceneGame::Init()
 {
-	//testModel = std::make_unique<Model>("Data/Assets/Model/player_anime.fbx", false);
-	//{
-	//	testModel->StartAnimation(2, true);
-	//	testModelData.Init();
-	//	testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
-	//}
+	testModel = std::make_unique<Model>("Data/Assets/Model/player_anime.fbx", false);
+	{
+		testModel->StartAnimation(2, true);
+		testModelData.Init();
+		testModelData.SetScale(DirectX::XMFLOAT3(0.01f, 0.01f, 0.01f));
+	}
 
 	// ‚·‚×‚Ä‚ÌƒTƒEƒ“ƒh‚ð’âŽ~
 	{
@@ -36,6 +36,7 @@ void SceneGame::Init()
 	GameSystem::Instance().Init();
 
 	EnemyManager::Instance().Init();
+	stage.Init();
 
 	std::shared_ptr<Enemy> enemy_00 = std::make_shared<EnemyDerrived01>();
 	EnemyManager::Instance().Spawn(enemy_00);
@@ -64,6 +65,11 @@ void SceneGame::Update()
 void SceneGame::Render()
 {
 	EnemyManager::Instance().Render();
+<<<<<<< HEAD
+=======
+	stage.Render();
+	GameSystem::Instance().Render();
+>>>>>>> 107a1b7bfc157684b8b04fe72abdfe36722547e3
 }
 
 
@@ -78,4 +84,5 @@ void SceneGame::UnInit()
 {
 	GameSystem::Instance().UnInit();
 	testModelData.UnInit();
+	stage.UnInit();
 }

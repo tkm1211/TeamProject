@@ -9,13 +9,15 @@
 void GameSystem::Init()
 {
     // é¿ëÃÇÃê∂ê¨
-    timer = std::make_unique<Timer>();
-    score_manager = std::make_unique<ScoreManager>();
-    wave_manager = std::make_unique<WaveManager>();
-    combo = std::make_unique<Combo>();
+    timer               = std::make_unique<Timer>(true);
+    score_manager       = std::make_unique<ScoreManager>();
+    wave_manager        = std::make_unique<WaveManager>();
+    combo               = std::make_unique<Combo>();
+    spr_ui_time_score   = std::make_unique<Sprite>(L"Data/Assets/Texture/time_score.png");
 
     // èâä˙âªèàóù
     timer.get()->Init();
+    timer.get()->SetTime(300);
     score_manager.get()->Init();
     wave_manager.get()->Init();
     combo.get()->Init();
@@ -35,8 +37,16 @@ void GameSystem::Update()
 void GameSystem::Render()
 {
     // ï`âÊ
-    timer.get()->Render();
-    score_manager.get()->Render();
+    spr_ui_time_score.get()->Draw2(
+        920, 90,
+        220, 120,
+        0, 0, 220, 120,
+        0,
+        1, 1, 1, 1);
+
+    wave_manager.get()->Render();
+    timer.get()->Render({ 1040.0f,40.0f });
+    score_manager.get()->Render({ 1040.0f,40.0f + 80.0f });
     combo.get()->Render();
 }
 
