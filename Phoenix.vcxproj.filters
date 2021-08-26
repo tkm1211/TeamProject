@@ -243,13 +243,16 @@
     <ClCompile Include="Sources\GameSources\Task.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\GameSources\EnemyDerrived01.cpp">
-      <Filter>Game\Sources</Filter>
-    </ClCompile>
     <ClCompile Include="Sources\GameSources\Enemy.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
     <ClCompile Include="Sources\GameSources\Combo.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\Stage.cpp">
+      <Filter>Library\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\EnemyDerrived01.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -414,6 +417,9 @@
       <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameLibSources\Collision.h">
+      <Filter>Library\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Stage.h">
       <Filter>Library\Headers</Filter>
     </ClInclude>
   </ItemGroup>

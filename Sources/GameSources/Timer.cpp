@@ -50,18 +50,20 @@ void Timer::Update()
 
 
     // ↓　時間の更新　↓
-    if (is_countdown/* == true */)
-    {
-        CountDown(elapsedTime);
-    }
+    //if (is_countdown/* == true */)
+    //{
+    //    CountDown(elapsedTime);
+    //}
 
-    else /* if (is_countdown == false) */
-    {
-        CountUp(elapsedTime);
-    }
+    //else /* if (is_countdown == false) */
+    //{
+    //    CountUp(elapsedTime);
+    //}
 
     // Tips :    上の処理と同じ (? = 三項演算子)
-    // is_countdown ? CountDown() : CountUp();
+    
+   /*int i = */is_countdown ? CountDown(elapsedTime) : CountUp(elapsedTime);
+   //
 }
 
 void Timer::CountUp(float elapsedTime)
