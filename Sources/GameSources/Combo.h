@@ -51,7 +51,7 @@ private:
     // 変数
     bool is_combo = false;                      // コンボ中
     int combo = 0;                              // 現在コンボ数
-    int max_comboed = FLT_MIN;                  // 過去最大コンボ
+    int max_comboed = INT_MIN;                  // 過去最大コンボ
     float combo_duration_timer = 0.0f;          // 仮タイマー
     std::unique_ptr<Timer> timer = nullptr;
     std::unique_ptr<Sprite> spr_icon = nullptr;
