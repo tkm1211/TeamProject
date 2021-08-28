@@ -264,6 +264,9 @@
     <ClCompile Include="Sources\GameSources\StaminaManager.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\GameSources\SceneResult.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Library\DirectXTex-master\DirectXTex\BC.h">
@@ -438,6 +441,9 @@
       <Filter>Library\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\StaminaManager.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\SceneResult.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>

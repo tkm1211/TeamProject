@@ -34,6 +34,7 @@ public: // GetŠÖ”
     int GetCombo() { return combo.get()->GetCombo(); }
     int GetMaxCombo() { return combo.get()->GetMaxCombo(); }
     float GetWaveClearTime(int index) { return wave_manager.get()->GetWaveClearData(index).clear_time; }
+    int GetWaveMax() { return wave_manager.get()->GetWaveMax(); }
 
 public: // SetŠÖ”
     void Clear()

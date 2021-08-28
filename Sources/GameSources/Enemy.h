@@ -11,8 +11,13 @@ public:
 	virtual void Update(const float elapsed_time) = 0;
 	void Render();
 
-public: // セッター関数
+public: // Get関数
+
+public: // Set関数
 	void SetPlayerPosition(DirectX::XMFLOAT3* player_pos) { player_position = player_pos; }
+
+protected:
+	DirectX::XMFLOAT3 GetPlayerPosition() { return *player_position; }
 
 protected:
 	std::shared_ptr<Model> model{ nullptr };

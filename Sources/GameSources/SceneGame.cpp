@@ -6,6 +6,7 @@
 #include "SoundLoader.h"
 #include "CameraSystem.h"
 #include "SceneTitle.h"
+#include "SceneResult.h"
 #include "GameSystem.h"
 // ’Ç‰Á
 #include "EnemyManager.h"
@@ -44,7 +45,7 @@ void SceneGame::Update()
 	{
 		Fade::GetInstance()->onFadeFlg = true;
 		Fade::GetInstance()->loading = true;
-		Fade::GetInstance()->SetNextScene(new SceneTitle());
+		Fade::GetInstance()->SetNextScene(new SceneResult());
 	}
 
 	playerModel->Update(FrameWork::GetInstance().GetElapsedTime());

@@ -39,6 +39,7 @@ public:
 
 public: // GetŠÖ”
     int GetNowWave() { return wave_state; };
+    int GetWaveMax() { return wave_max; }
     ClearData GetWaveClearData(int index) { return wave_resulted[index]; }
 
 public: // SetŠÖ”
