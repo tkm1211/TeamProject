@@ -67,7 +67,7 @@ public:
 	}
 
 public: // Getä÷êî
-	DirectX::XMFLOAT3 GetPos()    { return pos;		}
+	DirectX::XMFLOAT3& GetPos() { return pos; }
 	DirectX::XMFLOAT3 GetSpeed()  { return speed;	}
 	DirectX::XMFLOAT3 GetScale()  { return scale;	}
 	DirectX::XMFLOAT3 GetAngle()  { return angle;	}
