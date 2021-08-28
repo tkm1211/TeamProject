@@ -25,8 +25,6 @@ private:
 
 	Stage stage;
 
-	DirectX::XMFLOAT3 position = {100, 0, 100};
-
 public:
 	void Init();
 	void UnInit();

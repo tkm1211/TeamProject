@@ -2,6 +2,7 @@
 #include "WaveManager.h"
 #include "EnemyManager.h"
 #include "EnemyDerived01.h"
+#include "EnemyDerrivedHoming.h"
 #include <imgui.h>
 #include <imgui_impl_win32.h>
 #include <imgui_impl_dx11.h>
@@ -188,13 +189,13 @@ void WaveManager::SpawnEnemy()
     if (subtruct_time < wave_enemy_data[wave_state].spawn_cool_time) return;
 
     // TODO : 生成する敵の種類を増やす
-    constexpr int enemy_of_kinds = 1;
+    constexpr int enemy_of_kinds = 2;
     int random = rand() % enemy_of_kinds;
 
     // TODO : 敵の種類が増えたら増やす！！！
     std::shared_ptr<Enemy> enemy = nullptr;
     if (random == 0) enemy = std::make_shared<EnemyDerrived01>();
-    //if (random == 1) enemy = std::make_shared<EnemyDerrived02>();
+    if (random == 1) enemy = std::make_shared<EnemyDerrivedHoming>();
 
     if (!enemy) return;
     //　出現させる

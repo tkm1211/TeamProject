@@ -18,6 +18,7 @@ void SceneGame::Init()
 {
 
 	playerModel = std::make_unique<Player>();
+	playerModel.get()->Init();
 	// すべてのサウンドを停止
 	{
 		AllSoundStop();
@@ -32,7 +33,7 @@ void SceneGame::Init()
 
 	GameSystem::Instance().Init();
 
-	EnemyManager::Instance().Init(/*TODO: プレイヤーの現在位置のアドレスを入れる*/ &position); 
+	EnemyManager::Instance().Init(/*TODO: プレイヤーの現在位置のアドレスを入れる*/ &playerModel->GetPos()); 
 	stage.Init();
 }
 
@@ -49,7 +50,7 @@ void SceneGame::Update()
 		Fade::GetInstance()->SetNextScene(new SceneResult());
 	}
 
-	playerModel->Update(FrameWork::GetInstance().GetElapsedTime());
+	//playerModel->Update(FrameWork::GetInstance().GetElapsedTime());
 
 	EnemyManager::Instance().Update();
 
