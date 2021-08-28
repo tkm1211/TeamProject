@@ -22,6 +22,7 @@ public: // Get関数
 public: // Set関数
     void Clear() { time = 0.0f; }
     void SetTime(int time_) { time = static_cast<float>(time_); }
+    void AddTime(int time_) { time += static_cast<float>(time_); }
 
 private:
     // クラス内だけで使える関数 (クラスの外では関数が呼び出せない、使えない)

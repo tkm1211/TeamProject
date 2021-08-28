@@ -79,3 +79,11 @@ void GameSystem::KilledEnemy(float enemy_score)
 
     score_manager.get()->AddScore(score_ratio * enemy_score);
 }
+
+void GameSystem::DamagedPlayer()
+{
+    constexpr int minus_time = -5;
+    timer.get()->AddTime(minus_time);
+
+    if (timer.get()->GetNowTime() < 0.0f) timer.get()->SetTime(0);
+}
