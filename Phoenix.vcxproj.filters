@@ -264,6 +264,9 @@
     <ClCompile Include="Sources\GameSources\StaminaManager.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\GameSources\EnemyDerrivedHoming.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
     <ClCompile Include="Sources\GameSources\SceneResult.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
@@ -441,6 +444,9 @@
       <Filter>Library\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\StaminaManager.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\EnemyDerrivedHoming.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\SceneResult.h">

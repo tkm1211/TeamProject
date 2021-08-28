@@ -69,6 +69,7 @@
     <ClCompile Include="Sources\GameSources\easing.cpp" />
     <ClCompile Include="Sources\GameSources\Enemy.cpp" />
     <ClCompile Include="Sources\GameSources\EnemyDerrived01.cpp" />
+    <ClCompile Include="Sources\GameSources\EnemyDerrivedHoming.cpp" />
     <ClCompile Include="Sources\GameSources\EnemyManager.cpp" />
     <ClCompile Include="Sources\GameSources\Fade.cpp" />
     <ClCompile Include="Sources\GameSources\GameSystem.cpp" />
@@ -128,6 +129,7 @@
     <ClInclude Include="Sources\GameSources\easing.h" />
     <ClInclude Include="Sources\GameSources\Enemy.h" />
     <ClInclude Include="Sources\GameSources\EnemyDerived01.h" />
+    <ClInclude Include="Sources\GameSources\EnemyDerrivedHoming.h" />
     <ClInclude Include="Sources\GameSources\EnemyManager.h" />
     <ClInclude Include="Sources\GameSources\Fade.h" />
     <ClInclude Include="Sources\GameSources\GameSystem.h" />

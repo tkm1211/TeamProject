@@ -6,7 +6,7 @@
 #include <GeometricPrimitive.h>
 #include "Scene.h"
 #include "Model.h"
-#include"Player.h"
+#include "Player.h"
 
 #include "Stage.h"
 
@@ -24,6 +24,8 @@ private:
 	 int dash = 1;
 
 	Stage stage;
+
+	DirectX::XMFLOAT3 position = {100, 0, 100};
 
 public:
 	void Init();

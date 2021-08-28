@@ -11,6 +11,7 @@
 // 追加
 #include "EnemyManager.h"
 #include "EnemyDerived01.h"
+#include "EnemyDerrivedHoming.h"
 
 
 void SceneGame::Init()
@@ -31,7 +32,7 @@ void SceneGame::Init()
 
 	GameSystem::Instance().Init();
 
-	EnemyManager::Instance().Init(/*TODO: プレイヤーの現在位置のアドレスを入れる*/);
+	EnemyManager::Instance().Init(/*TODO: プレイヤーの現在位置のアドレスを入れる*/ &position); 
 	stage.Init();
 }
 
