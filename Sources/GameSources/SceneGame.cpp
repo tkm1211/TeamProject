@@ -35,6 +35,7 @@ void SceneGame::Init()
 
 	EnemyManager::Instance().Init(/*TODO: プレイヤーの現在位置のアドレスを入れる*/ &playerModel->GetPos()); 
 	stage.Init();
+
 }
 
 
@@ -50,12 +51,13 @@ void SceneGame::Update()
 		Fade::GetInstance()->SetNextScene(new SceneResult());
 	}
 
-	//playerModel->Update(FrameWork::GetInstance().GetElapsedTime());
+	playerModel->Update(FrameWork::GetInstance().GetElapsedTime());
 
 	EnemyManager::Instance().Update();
 
 	// 更新
 	GameSystem::Instance().Update();
+	CameraSystem::GetInstance()->mainView.SetTarget(playerModel.get()->GetPos());
 }
 
 

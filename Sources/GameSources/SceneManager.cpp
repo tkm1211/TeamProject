@@ -45,7 +45,7 @@ void SceneManager::Update()
 	Light::GetInstance()->Update();
 
 	{
-		CameraControl::MouseControlUpdate(&CameraSystem::GetInstance()->enemyEditorView);
+		CameraControl::PadControlUpdate(&CameraSystem::GetInstance()->mainView);
 	}
 
 	// XVˆ—
