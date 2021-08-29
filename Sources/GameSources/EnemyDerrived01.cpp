@@ -1,5 +1,5 @@
 #include "EnemyDerived01.h"
-
+#include "Enemy.h"
 #include "Model.h"
 
 EnemyDerrived01::EnemyDerrived01()
