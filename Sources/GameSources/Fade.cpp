@@ -7,9 +7,9 @@
 
 void Fade::Init()
 {
-	//fade_spr = std::make_unique<SpriteBatch>(L"Data/Assets/Texture/blackFade.png");
-	//fade_spr_data.texPos = { 0, 0 };		//テクスチャの左上
-	//fade_spr_data.size = { 1920, 1080 };	//テクスチャの幅、高さ
+	fade_spr = std::make_unique<SpriteBatch>(L"Data/Assets/Texture/blackFade.png");
+	fade_spr_data.texPos = { 0, 0 };		//テクスチャの左上s
+	fade_spr_data.size = { 1920, 1080 };	//テクスチャの幅、高さ
 
 	onFadeFlg = false;
 	loading = false;
