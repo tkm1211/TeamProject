@@ -3,12 +3,12 @@
 #include "Model.h"
 #include "OBJ3D.h"
 
-
-class Stage : public OBJ3D
+class StageTitle : public OBJ3D
 {
 public:
 	void Init();
 	void UnInit();
+	void Update();
 	void Render();
 
 protected:

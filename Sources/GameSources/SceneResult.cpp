@@ -18,7 +18,7 @@ void SceneResult::Init()
 
 	// サウンドの再生
 	{
-		PlaySoundMem(SoundLoader::GetInstance()->bgm.get()); // ループ再生
+		PlaySoundMem(SoundLoader::GetInstance()->bgm1.get()); // ループ再生
 		PlaySoundMem(SoundLoader::GetInstance()->se.get()); // 単発再生
 	}
 

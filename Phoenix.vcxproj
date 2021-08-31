@@ -83,6 +83,7 @@
     <ClCompile Include="Sources\GameSources\ScoreManager.cpp" />
     <ClCompile Include="Sources\GameSources\SoundLoader.cpp" />
     <ClCompile Include="Sources\GameSources\Stage.cpp" />
+    <ClCompile Include="Sources\GameSources\StageTitle.cpp" />
     <ClCompile Include="Sources\GameSources\StaminaManager.cpp" />
     <ClCompile Include="Sources\GameSources\Task.cpp" />
     <ClCompile Include="Sources\GameSources\Timer.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="Sources\GameSources\ScoreManager.h" />
     <ClInclude Include="Sources\GameSources\SoundLoader.h" />
     <ClInclude Include="Sources\GameSources\Stage.h" />
+    <ClInclude Include="Sources\GameSources\StageTitle.h" />
     <ClInclude Include="Sources\GameSources\StaminaManager.h" />
     <ClInclude Include="Sources\GameSources\Task.h" />
     <ClInclude Include="Sources\GameSources\Timer.h" />

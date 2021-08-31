@@ -258,9 +258,6 @@
     <ClCompile Include="Sources\GameSources\Projectile.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\GameSources\Stage.cpp">
-      <Filter>Library\Sources</Filter>
-    </ClCompile>
     <ClCompile Include="Sources\GameSources\StaminaManager.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
@@ -268,6 +265,12 @@
       <Filter>Game\Sources</Filter>
     </ClCompile>
     <ClCompile Include="Sources\GameSources\SceneResult.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\Stage.cpp">
+      <Filter>Game\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameSources\StageTitle.cpp">
       <Filter>Game\Sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -440,9 +443,6 @@
     <ClInclude Include="Sources\GameSources\Projectile.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
-    <ClInclude Include="Sources\GameSources\Stage.h">
-      <Filter>Library\Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Sources\GameSources\StaminaManager.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
@@ -450,6 +450,12 @@
       <Filter>Game\Headers</Filter>
     </ClInclude>
     <ClInclude Include="Sources\GameSources\SceneResult.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\Stage.h">
+      <Filter>Game\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sources\GameSources\StageTitle.h">
       <Filter>Game\Headers</Filter>
     </ClInclude>
   </ItemGroup>

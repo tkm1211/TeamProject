@@ -9,7 +9,8 @@
 //***************************************************************************************************
 void SoundLoader::load()
 {
-	bgm = std::make_unique<CXAudio2>(L"Data/Assets/Sound/BGM/GameMain.wav", 1);
+	bgm1 = std::make_unique<CXAudio2>(L"Data/Assets/Sound/BGM/Title.wav", 1);
+	bgm2 = std::make_unique<CXAudio2>(L"Data/Assets/Sound/BGM/Stage.wav", 1);
 	se = std::make_unique<CXAudio2>(L"Data/Assets/Sound/SE/KO/ko.wav", 0);
 }
 
@@ -21,7 +22,8 @@ void SoundLoader::load()
 //***************************************************************************************************
 void SoundLoader::Update()
 {
-	bgm->Update();
+	bgm1->Update();
+	bgm2->Update();
 	se->Update();
 }
 
@@ -32,7 +34,8 @@ void SoundLoader::Update()
 //***************************************************************************************************
 void SoundLoader::Release()
 {
-	bgm->Relese();
+	bgm1->Relese();
+	bgm2->Relese();
 	se->Relese();
 }
 
@@ -48,7 +51,8 @@ void AllSoundStop()
 
 void AllBgmSoundStop()
 {
-	StopSoundMem(SoundLoader::GetInstance()->bgm.get());
+	StopSoundMem(SoundLoader::GetInstance()->bgm1.get());
+	StopSoundMem(SoundLoader::GetInstance()->bgm2.get());
 }
 
 

@@ -7,7 +7,7 @@ private:
 	SoundLoader() {}
 
 public:
-	std::unique_ptr<CXAudio2> bgm;
+	std::unique_ptr<CXAudio2> bgm1, bgm2;
 	std::unique_ptr<CXAudio2> se;
 
 
