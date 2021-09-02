@@ -45,6 +45,7 @@ void SceneManager::Update()
 	Light::GetInstance()->Update();
 
 	{
+		CameraControl::MouseControlUpdate(&CameraSystem::GetInstance()->mainView);
 		CameraControl::PadControlUpdate(&CameraSystem::GetInstance()->mainView);
 	}
 
