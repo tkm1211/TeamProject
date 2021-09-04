@@ -2,7 +2,7 @@
 #include "Camera.h"
 
 
-class CameraSystem
+class CameraSystem 
 {
 public:
 	Camera mainView;

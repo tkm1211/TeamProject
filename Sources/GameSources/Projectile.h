@@ -1,16 +1,24 @@
 #pragma once
 #include <DirectXMath.h>
+#include <memory>
+#include "OBJ3D.h"
+#include "./GameLibSources/Shader.h"
 
+class ProjectileManager;  //前方宣言は相互インクルード防止の為にやる
 
 //弾丸
-class Projectile
+class Projectile :public OBJ3D
 {
 public:
+
+    Projectile(ProjectileManager* manager);  //登録されるマネージャーを保持するようにする
+    virtual ~Projectile() {}
 
 
     //更新処理
     virtual void Update(float elapsedTime) = 0;
 
+    virtual void Render(ID3D11DeviceContext* dc, Shader* shader) = 0;
 
     //デバックプリミティブ描画
     virtual void DrawDebugPrimitive();
@@ -29,6 +37,9 @@ public:
     float GetRadius() const { return radius; }
 
 
+    //破棄
+    void Destroy();
+
 protected:
     //行列更新処理
     void UpdateTransform();
@@ -43,7 +54,7 @@ protected:
 
     float radius = 0.5f;
 
-
+    ProjectileManager* manager = nullptr;
 
 };
 
