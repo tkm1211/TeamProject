@@ -191,11 +191,6 @@ void WaveManager::SpawnEnemy()
     int random = Random(0, enemy_of_kinds);
 
 
-
-    // TODO : ¶¬‚·‚é“G‚Ìí—Ş‚ğ‘‚â‚·
-    constexpr int enemy_of_kinds = 2;
-    int random = rand() % enemy_of_kinds;
-
     // TODO : “G‚Ìí—Ş‚ª‘‚¦‚½‚ç‘‚â‚·III
     std::shared_ptr<Enemy> enemy = nullptr;
     if (random == 0) enemy = std::make_shared<EnemyDerrived01>();
