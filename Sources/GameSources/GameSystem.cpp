@@ -47,7 +47,7 @@ void GameSystem::Render()
     wave_manager.get()->Render();
     timer.get()->Render({ 1040.0f,40.0f });
     score_manager.get()->Render({ 1040.0f,40.0f + 80.0f });
-    combo.get()->Render();
+    combo.get()->Render({870.0f, 600.0f});
 }
 
 

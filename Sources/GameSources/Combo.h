@@ -15,7 +15,7 @@ public:
     void Init();
     void UnInit();
     void Update();
-    void Render();
+    void Render(const DirectX::XMFLOAT2 pos = {});
     void ImGui();
 
 public: // Getä÷êî
@@ -43,6 +43,7 @@ private:
         combo = 0;
         combo_duration_timer = 0.0f;
     }
+    void SliceDigits(float digits_, float& ones_place, float& tens_place, float& hundreds_place);
 
 private:
     // íËêî

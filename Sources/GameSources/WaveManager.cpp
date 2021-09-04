@@ -69,6 +69,25 @@ void WaveManager::ImGui()
 
     int enemy_total = EnemyManager::Instance().GetEnemyTotalCount();
     ImGui::Text("total enemy : %d", enemy_total);
+
+
+    if (enemy_total <= 0) return;
+
+    ImGui::SetNextTreeNodeOpen(true, ImGuiCond_Once);
+    if (ImGui::TreeNode("Enemy"))
+    {
+        for (int i = 0; i < enemy_total; ++i)
+        {
+            Enemy* enemy = EnemyManager::Instance().GetEnemy(i);
+            ImGui::Text("enemy : %d", i);
+            ImGui::SliderFloat3("pos", &enemy->GetPos().x, -1200.0f, 1200.0f);
+
+            ImGui::Spacing();
+        }
+
+        ImGui::TreePop();
+    }
+
 }
 
 
@@ -204,9 +223,7 @@ void WaveManager::SpawnEnemy()
     random = Random(0, pos_of_kinds);
 
     // 敵の出現位置の決定
-    DirectX::XMFLOAT3 pos = SetRamdomPosition(random);
-
-    enemy.get()->SetPos(pos);
+    enemy.get()->SetPos(SetRamdomPosition(random));
 
 
     //　設定した敵を出現させる
@@ -241,9 +258,9 @@ DirectX::XMFLOAT3 WaveManager::SetRamdomPosition(int index)
 {
     constexpr int pos_of_kinds = 4;
 
-    constexpr float out_range = 600.0f;                         // 適当な数値
-    constexpr int random_min = -300;
-    constexpr int random_range = 600;
+    constexpr float out_range = 1200.0f;                         // 適当な数値
+    constexpr int random_min = -1000;
+    constexpr int random_range = 2000;
 
     DirectX::XMFLOAT3 random_pos[pos_of_kinds] =
     {
