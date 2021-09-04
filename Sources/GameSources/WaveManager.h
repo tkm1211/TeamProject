@@ -50,7 +50,12 @@ private:
     void SetEnemyData();
     bool JudgeTaskComplete();
     void ChangeNextTask();
+    bool CoolTime();
     void SpawnEnemy();
+    DirectX::XMFLOAT3 SetRamdomPosition(int index);
+
+    int Random(const int min, const int range);
+    float fRandom(const int min, const int range);
 
 private:
     // ’è”
