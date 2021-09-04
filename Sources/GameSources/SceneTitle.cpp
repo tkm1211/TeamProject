@@ -13,7 +13,7 @@
 void SceneTitle::Init()
 {
 	// テクスチャの初期化
-	titleSpr = std::make_unique<SpriteBatch>(L"Data/Assets/Texture/Title/Press Crusher.png", 1); // 引数 : ファイルパス, 同時描画数
+	titleSpr = std::make_unique<SpriteBatch>(L"Data/Assets/Texture/Title/title.png", 1); // 引数 : ファイルパス, 同時描画数
 	{
 		titleSprData.pos = { 400, 50 };
 		titleSprData.size = { 1280.0f, 720.0f };
@@ -49,7 +49,7 @@ void SceneTitle::Init()
 	// サウンドの再生
 	{
 		PlaySoundMem(SoundLoader::GetInstance()->bgm1.get()); // ループ再生
-		//PlaySoundMem(SoundLoader::GetInstance()->se.get()); // 単発再生
+		PlaySoundMem(SoundLoader::GetInstance()->se.get()); // 単発再生
 	}
 }
 
@@ -93,7 +93,7 @@ void SceneTitle::Render()
 			stageTitle.Render();
 		}
 		titleSpr2->Begin();
-		titleSpr2->Draw(titleSprData2, 0, { 1, 0, 0, 1 });
+		titleSpr2->Draw(titleSprData2, 0, { 1, 1, 1, 1 });
 		titleSpr2->End();
 		titleSpr->Begin();
 		titleSpr->Draw(titleSprData, 0, { 1, 1, 1, 1 });

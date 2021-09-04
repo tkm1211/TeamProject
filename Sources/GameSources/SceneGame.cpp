@@ -29,7 +29,7 @@ void SceneGame::Init()
 	// サウンドの再生
 	{
 		PlaySoundMem(SoundLoader::GetInstance()->bgm2.get()); // ループ再生
-		//PlaySoundMem(SoundLoader::GetInstance()->se.get()); // 単発再生
+		PlaySoundMem(SoundLoader::GetInstance()->se.get()); // 単発再生
 	}
 
 	GameSystem::Instance().Init();

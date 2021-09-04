@@ -113,6 +113,17 @@ void CameraControl::PadControlUpdate( Camera* camera )
 	{
 		camera->rotateX = 0.05f;
 	}
+	//前方向ベクトルを取り出す
+	DirectX::XMFLOAT3 front = camera->GetFront();
+
+	DirectX::XMFLOAT3 eye;
+    eye.x = camera->target.x - front.x * camera->GetRange();
+    eye.y = camera->target.y - front.y * camera->GetRange();
+    eye.z = camera->target.z - front.z *  camera->GetRange();
+
+	//カメラの視点と注視点を設定
+	//Camera::Instance().SetLookAt(eye, camera->target/*注視点*/, DirectX::XMFLOAT3(0, 1, 0)/*上方向*/);
+
 }
 
 void CameraControl::CameraRotation( Camera* camera )

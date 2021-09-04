@@ -8,6 +8,7 @@
 class Camera
 {
 private:
+
 	DirectX::XMFLOAT3	originPos;
 	DirectX::XMFLOAT3	originTarget;
 
@@ -15,6 +16,7 @@ private:
 	const DirectX::XMFLOAT3	originRight  = DirectX::XMFLOAT3(1.0f, 0.0f, 0.0f);
 
 public:
+
 	DirectX::XMFLOAT3 pos;
 	DirectX::XMFLOAT3 up;
 	DirectX::XMFLOAT3 right;
@@ -26,6 +28,10 @@ public:
 	DirectX::XMFLOAT2 oldCursor;
 	DirectX::XMFLOAT2 newCursor;
 
+
+	DirectX::XMFLOAT3    front;
+
+
 	float rotateX;
 	float rotateY;
 	float distance;
@@ -34,12 +40,19 @@ public:
 
 	bool updateLook;
 	bool updateNow;
+	float               range = 10.0f;
 
 public:
 	Camera() {}
 	~Camera() {}
 
 	void Init( const DirectX::XMFLOAT3& _pos, const DirectX::XMFLOAT3& _target );
+
+	static Camera* GetInstance()
+	{
+		static Camera instance;
+		return &instance;
+	}
 
 public: // GetŠÖ”
 	DirectX::XMMATRIX	GetViewMatrix();
@@ -54,6 +67,14 @@ public: // GetŠÖ”
 
 	bool GetUpdateLook() { return updateLook; }
 	bool GetUpdateNow() { return updateNow; }
+	//ã•ûŒüæ“¾
+	const DirectX::XMFLOAT3& GetUp() const { return up; }
+	//‘O•ûŒüæ“¾
+	const DirectX::XMFLOAT3& GetFront() const { return front; }
+	//‰E•ûŒüæ“¾
+	const DirectX::XMFLOAT3& GetRight() const { return right; }
+
+	float  GetRange() { return range; }
 
 public: // SetŠÖ”
 	DirectX::XMMATRIX	SetOrthographicMatrix(float w, float h, float znear, float zfar);
@@ -68,4 +89,7 @@ public: // SetŠÖ”
 
 	void SetViewMatrix(const DirectX::XMMATRIX& _view) { view = _view; }
 	void SetProjectionMatrix(const DirectX::XMMATRIX& _projection) { projection = _projection; }
+
+
+
 };

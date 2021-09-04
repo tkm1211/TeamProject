@@ -1,13 +1,14 @@
 #include "EnemyDerrivedHoming.h"
-
 #include "Model.h"
-#include "EnemyDerived01.h"
 
 EnemyDerrivedHoming::EnemyDerrivedHoming()
 	:Enemy()
 {
 	model = std::make_shared<Model>("Data/Assets/Model/Enemy/enemy.fbx", false);
 	Init();
+	speed = { 100.0f, 0.0f, 100.0f };
+	color = { 0.0f, 1.0f, 0.0f, 1.0f };
+	pos = { 200.0f, 0.0f, 200.0f };
 }
 
 
@@ -23,7 +24,7 @@ void EnemyDerrivedHoming::Update(const float elapsed_time)
 	V = DirectX::XMVector3Normalize(V);
 	DirectX::XMFLOAT3 VN;
 	DirectX::XMStoreFloat3(&VN, V);
-	pos.x += VN.x * moveSpeed * elapsed_time;
-	pos.y += VN.y * moveSpeed * elapsed_time;
-	pos.z += VN.z * moveSpeed * elapsed_time;
+	pos.x += VN.x * speed.x * elapsed_time;
+	pos.y += VN.y * speed.y * elapsed_time;
+	pos.z += VN.z * speed.z * elapsed_time;
 }

@@ -2,9 +2,9 @@
 #include "Enemy.h"
 
 
-class EnemyDerrivedHoming final : public Enemy
+class EnemyDerrived02 final : public Enemy
 {
 public:
-	EnemyDerrivedHoming();
+	EnemyDerrived02();
 	void Update(const float elapsed_time) override;
 };
